@@ -1,0 +1,14 @@
+.home {
+	min-height: 100vh;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.home h1 {
+	font-size: 68px;
+	max-width: 670px;
+	line-height: 1.1;
+}
