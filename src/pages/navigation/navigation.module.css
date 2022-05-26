@@ -4,9 +4,10 @@
 	text-transform: uppercase;
 	align-items: center;
 	justify-content: space-between;
-	margin-top: 2rem;
+	margin-top: var(--logo-left-space);
 }
 .logo {
+	position: relative;
 	flex-shrink: 0;
 	width: 37px;
 	height: 48px;
@@ -40,41 +41,44 @@
 	position: relative;
 	width: 100%;
 	height: 1px;
-	border-bottom: 1px solid #6e6e73;
+	border-bottom: 1px solid rgba(110, 110, 115, 0.4);
 	z-index: 20;
 	transform: translateX(2.5rem);
 }
+
 @media (min-width: 700px) {
 	.navlinks > * + * {
 		margin-left: 2.315rem;
 	}
-	.menuButton {
-		display: none;
+	.logo::after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 100%;
+		height: 90vh;
+		margin-top: 1rem;
+		transform: translateX(50%);
+		border-left: 1px solid rgba(110, 110, 115, 0.4);
+		z-index: 25;
 	}
 }
+
 @media (max-width: 700px) {
 	.navlinks {
 		--underline: 1rem;
-		flex-direction: column;
 		position: fixed;
-		inset: 0 0 0 100%;
+		flex-direction: column;
 		align-items: start;
-		background-color: rgba(var(--clr-purple));
-		z-index: 20;
+		inset: 0 0 0 100%;
 		padding: 7rem 4rem;
 		transform: translateX(100%);
 		transition: transform 1s ease-in-out;
+		background-color: rgba(var(--clr-purple));
+		z-index: 20;
 	}
 	.navHeader::before {
 		transform: translateX(0);
 		margin-inline: 1rem;
-	}
-	.menuButton {
-		cursor: pointer;
-		margin-right: 1.4rem;
-		border: 0;
-		z-index: 100;
-		background-color: transparent;
 	}
 	.logo {
 		margin-left: 1.4rem;

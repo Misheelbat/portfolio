@@ -1,16 +1,22 @@
 import React, { useState } from 'react';
 import { Outlet, NavLink } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
-import { ReactComponent as Menu } from '../../assets/menu.svg';
-import { ReactComponent as CloseMenu } from '../../assets/closeMenu.svg';
+import MenuButton from '../../components/Elements/menuButton/MenuButton';
 
 import styles from './navigation.module.css';
 export default function Navigation() {
 	const [open, setOpen] = useState(false);
+
+	const toggleMenu = () => {
+		setOpen(!open);
+	};
+
 	return (
 		<>
 			<header className={styles.navHeader}>
-				<Logo className={styles.logo} />
+				<div className={styles.logo}>
+					<Logo />
+				</div>
 				<nav>
 					<ul data-open={open} className={styles.navlinks}>
 						<li>
@@ -27,13 +33,7 @@ export default function Navigation() {
 						</li>
 					</ul>
 				</nav>
-				<button onClick={() => setOpen(!open)} className={styles.menuButton}>
-					{open ? (
-						<CloseMenu width="25px" />
-					) : (
-						<Menu width="20px" height="25px" />
-					)}
-				</button>
+				<MenuButton open={open} onClick={toggleMenu} />
 			</header>
 			<Outlet />
 		</>

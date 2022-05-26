@@ -1,19 +1,51 @@
 .home {
-	flex: 1;
+	position: relative;
 	display: flex;
 	align-items: center;
-	min-height: 100vh;
-	max-width: 1200px;
 	margin: 0 auto;
+	min-height: 90vh;
+	max-width: 1300px;
+	padding-left: 1rem;
 }
 
 .home h1 {
-	font-size: 40px;
+	font-size: 34px;
 	max-width: 670px;
 	line-height: 1.1;
 }
+.downArrow {
+	display: flex;
+	position: absolute;
+	right: 2rem;
+	bottom: 5rem;
+}
+.arrow {
+	width: 20px;
+	margin-left: 0.5rem;
+	animation: arrow 1.5s linear infinite;
+}
+@keyframes arrow {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-5px);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@media (min-width: 400px) {
+	.home h1 {
+		font-size: 40px;
+	}
+}
 
 @media (min-width: 700px) {
+	.home {
+		padding-left: 4.5rem;
+	}
 	.home h1 {
 		font-size: 68px;
 	}
