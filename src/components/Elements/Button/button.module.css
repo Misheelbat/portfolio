@@ -6,6 +6,7 @@
 	font-size: 20px;
 	text-align: left;
 	background-color: var(--clr-green);
+	cursor: pointer;
 
 	border: none;
 	border-radius: 0.4em;
@@ -38,7 +39,7 @@
 
 .primaryButton:hover,
 .primaryButton:focus {
-	background-color: var(--clr-purple);
+	background-color: rgb(var(--clr-purple));
 	transition: background-color 250ms ease-in;
 }
 

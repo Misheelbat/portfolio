@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Button from '../../components/Elements/Button/Button';
 
 import styles from './home.module.css';
@@ -7,7 +7,7 @@ export default function Home() {
 		<main className={styles.home}>
 			<div>
 				<h1>
-					Hi, i'm <span>Misheel</span>,<br /> a web developer based in Austria
+					Hi, i'm <span>John doe</span>,<br /> a web developer based in Austria
 				</h1>
 				<Button>LET'S TALK!</Button>
 			</div>

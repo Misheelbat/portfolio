@@ -29,6 +29,8 @@ body {
 	line-height: 1.6;
 	background-color: var(--clr-bg);
 }
+
+/* navlinks active style */
 li a.active {
 	border-bottom: 3px solid black;
 }
