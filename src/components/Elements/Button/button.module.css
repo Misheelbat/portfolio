@@ -1,24 +1,51 @@
 .primaryButton {
 	display: flex;
 	align-items: center;
-	position: relative;
+	justify-content: center;
 
-	font-size: 20px;
-	text-align: left;
-	background-color: var(--clr-green);
 	cursor: pointer;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: left;
 
+	padding: 0.5em 0.8em;
 	border: none;
 	border-radius: 0.4em;
-
-	min-width: 270px;
-	padding: 0.5em 0.8em;
-	margin-top: 2.5em;
-
-	transition: background-color 250ms ease-in;
+}
+.primaryButton[data-click='false'] {
+	position: absolute;
+	width: 270px;
+	left: 4rem;
+	bottom: calc(35% - 90px);
+	background-color: var(--clr-green);
+	transition: all 0.5s ease-in-out;
 }
 
-.primaryButton::after {
+.primaryButton[data-click='false'] .contact {
+	position: absolute;
+	visibility: hidden;
+}
+.primaryButton[data-click='true'] .contact {
+	visibility: visible;
+	transition: visibility 250ms ease-in;
+	transition-delay: 250ms;
+}
+
+.primaryButton[data-click='false'] .content {
+	visibility: visible;
+	display: flex;
+	align-items: center;
+	width: 100%;
+	transition: visibility 250ms ease-in;
+	transition-delay: 400ms;
+}
+.primaryButton[data-click='true'] .content {
+	visibility: hidden;
+	position: absolute;
+	transition: visibility 200ms ease-in;
+}
+
+.primaryButton[data-click='false']::after {
 	content: '';
 	position: absolute;
 	border: 1px solid rgba(0, 0, 0, 0.25);
@@ -30,7 +57,7 @@
 	z-index: -1;
 }
 
-.arrow {
+.primaryButton[data-click='false'] .arrow {
 	margin-left: auto;
 	margin-right: 0.3em;
 	font-size: 30px;
@@ -40,7 +67,6 @@
 .primaryButton:hover,
 .primaryButton:focus {
 	background-color: rgb(var(--clr-purple));
-	transition: background-color 250ms ease-in;
 }
 
 @keyframes arrow {
@@ -54,3 +80,19 @@
 		transform: translateX(0);
 	}
 }
+
+.primaryButton[data-click='true'] {
+	position: fixed;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	bottom: calc(100vh - 98%);
+	left: calc(100% - 90px);
+	background-color: var(--clr-green);
+
+	transition: all 0.5s ease-in-out;
+}
+
+/* {
+	background-color: rgb(var(--clr-purple));
+} */
