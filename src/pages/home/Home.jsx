@@ -1,27 +1,23 @@
 import React from 'react';
-import Button from '../../components/Elements/Button/Button';
-import { ReactComponent as Arrow } from '../../assets/downArrow.svg';
-import { ReactComponent as Art } from '../../assets/art-group.svg';
-
+import { ReactComponent as Circle } from '../../assets/circle.svg';
+import { ReactComponent as Eclipse } from '../../assets/eclipse.svg';
 
 import styles from './home.module.css';
 export default function Home() {
 	return (
 		<main className={styles.home}>
-
 			<div className={styles.content}>
-				<h1>
-					Hi, i'm <span>John doe</span>,<br /> a web developer
-					<br /> based in Austria
-				</h1>
-				<Button />
+				<h1>Automate routine work</h1>
+				<p>
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, a
+					qui! Dolores doloribus consequatur modi.
+				</p>
+				<button className={styles.contactBtn}>Let's Talk!</button>
 			</div>
-
-			<div className={styles.scrollIndicator}>
-				Scroll to explore <Arrow className={styles.arrow} />
+			<div className={styles.circleContainer}>
+				<Circle className={styles.circle} />
+				<Eclipse className={styles.eclipse} />
 			</div>
-			
-			<Art className={styles.art} />
 		</main>
 	);
 }

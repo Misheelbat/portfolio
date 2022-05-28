@@ -4,17 +4,25 @@
 	box-sizing: border-box;
 }
 :root {
-	--clr-bg: #e8e8e8;
+	--clr-bg: #1c1c1c;
 	--clr-green: #c7ecdf;
-	--clr-purple: 218, 196, 247;
+	--clr-purple: rgb(218, 196, 247);
 
-	--logo-left-space: 2rem;
-	--left-space: 1rem;
+	--left-space: 10%;
+
+	--fs-header: 34px;
+}
+
+@media (min-width: 700px) {
+	:root {
+		--fs-header: 54px;
+	}
 }
 
 h1,
 ul,
-li {
+li,
+p {
 	margin: 0;
 	padding: 0;
 }
@@ -32,6 +40,9 @@ body {
 	font-family: 'Poppins', sans-serif;
 	line-height: 1.6;
 	background-color: var(--clr-bg);
+	min-height: 100vh;
+	display: grid;
+	align-items: center;
 }
 
 /* navlinks active style */
