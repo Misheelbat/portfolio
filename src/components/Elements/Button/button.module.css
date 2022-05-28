@@ -4,24 +4,34 @@
 	justify-content: center;
 
 	cursor: pointer;
-	font-size: 20px;
-	font-weight: 700;
+	font-size: 16px;
 	text-align: left;
+	background-color: var(--clr-green);
+	letter-spacing: 1px;
 
+	width: 180px;
 	padding: 0.5em 0.8em;
 	border: none;
 	border-radius: 0.4em;
-}
-.primaryButton[data-click='false'] {
+
 	position: absolute;
-	width: 270px;
-	left: 4rem;
-	bottom: calc(35% - 90px);
+	left: var(--left-space);
+	bottom: calc(25% - 100px);
+	transition: all 0.5s ease-in;
+}
+.primaryButton[data-click='true'] {
+	position: fixed;
+
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	bottom: calc(100vh - 98%);
+	left: calc(100% - 90px);
+
 	background-color: var(--clr-green);
-	transition: all 0.5s ease-in-out;
 }
 
-.primaryButton[data-click='false'] .contact {
+.primaryButton .contact {
 	position: absolute;
 	visibility: hidden;
 }
@@ -31,7 +41,7 @@
 	transition-delay: 250ms;
 }
 
-.primaryButton[data-click='false'] .content {
+.primaryButton .content {
 	visibility: visible;
 	display: flex;
 	align-items: center;
@@ -65,7 +75,8 @@
 }
 
 .primaryButton:hover,
-.primaryButton:focus {
+.primaryButton:focus,
+.primaryButton[data-click='true']:hover {
 	background-color: rgb(var(--clr-purple));
 }
 
@@ -81,18 +92,12 @@
 	}
 }
 
-.primaryButton[data-click='true'] {
-	position: fixed;
-	width: 60px;
-	height: 60px;
-	border-radius: 50%;
-	bottom: calc(100vh - 98%);
-	left: calc(100% - 90px);
-	background-color: var(--clr-green);
-
-	transition: all 0.5s ease-in-out;
+@media (min-width: 700px) {
+	.primaryButton {
+		width: 280px;
+		font-size: 20px;
+	}
+	.primaryButton[data-click='false'] {
+		left: 4rem;
+	}
 }
-
-/* {
-	background-color: rgb(var(--clr-purple));
-} */

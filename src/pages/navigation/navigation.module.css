@@ -20,7 +20,7 @@
 	margin-left: auto;
 	padding-inline: clamp(3rem, 7vw, 9rem);
 	background-color: rgba(var(--clr-purple), 0.4);
-	/* backdrop-filter: blur(1.5rem); */
+	backdrop-filter: blur(1.5rem);
 }
 
 .navlinks a {
@@ -31,10 +31,10 @@
 }
 .navlinks a:hover,
 .navlinks a:focus {
-	border-color: #6e6e73;
+	border-color: rgba(110, 110, 115, 0.5);
 }
 
-/* line */
+/* middle line */
 .navHeader::before {
 	content: '';
 	display: block;

@@ -1,11 +1,11 @@
 .home {
-	position: relative;
+	/* position: relative; */
 	display: flex;
 	align-items: center;
 	margin: 0 auto;
 	min-height: 90vh;
 	max-width: 1300px;
-	padding-left: 1rem;
+	padding-left: var(--left-space);
 }
 
 .home h1 {
@@ -13,18 +13,23 @@
 	max-width: 670px;
 	line-height: 1.1;
 }
-.downArrow {
+
+.art {
+	display: none;
+}
+
+.scrollIndicator {
 	display: flex;
 	position: absolute;
+	bottom: 2rem;
 	right: 2rem;
-	bottom: 5rem;
 }
 .arrow {
 	width: 20px;
 	margin-left: 0.5rem;
-	animation: arrow 1.5s linear infinite;
+	animation: upAndDown 1.5s linear infinite;
 }
-@keyframes arrow {
+@keyframes upAndDown {
 	0% {
 		transform: translateY(0);
 	}
@@ -38,7 +43,7 @@
 
 @media (min-width: 400px) {
 	.home h1 {
-		font-size: 40px;
+		font-size: 44px;
 	}
 }
 
@@ -47,6 +52,33 @@
 		padding-left: 4.5rem;
 	}
 	.home h1 {
+		font-size: 54px;
+	}
+	.art {
+		display: block;
+		position: absolute;
+		right: 0;
+		z-index: -1;
+	}
+}
+@media (min-width: 800px) {
+	.home h1 {
 		font-size: 68px;
+	}
+}
+
+/* abstract figures */
+@media (max-width: 700px) {
+	.home::after {
+		content: url(../../assets/art1.svg);
+		position: absolute;
+		left: 0;
+		top: 15%;
+	}
+	.home h1::before {
+		content: url(../../assets/art2.svg);
+		position: absolute;
+		right: 0;
+		top: 30%;
 	}
 }

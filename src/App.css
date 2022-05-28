@@ -3,13 +3,15 @@
 *::before {
 	box-sizing: border-box;
 }
-html {
+:root {
 	--clr-bg: #e8e8e8;
 	--clr-green: #c7ecdf;
 	--clr-purple: 218, 196, 247;
 
 	--logo-left-space: 2rem;
+	--left-space: 1rem;
 }
+
 h1,
 ul,
 li {
