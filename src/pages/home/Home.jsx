@@ -21,3 +21,7 @@ export default function Home() {
 		</main>
 	);
 }
+/* TODO */
+/* active link, hover-state, moving contact, horizontal-scroll
+
+*/

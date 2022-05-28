@@ -1,6 +1,6 @@
 .home {
 	position: relative;
-	padding-left: var(--left-space);
+	/* padding-left: var(--left-space); */
 	color: white;
 }
 
@@ -41,7 +41,8 @@
 .eclipse {
 	position: absolute;
 	right: 0;
-	animation: spin 2s linear infinite;
+	animation: spin 2s linear 2;
+	z-index: 20;
 }
 
 @keyframes spin {

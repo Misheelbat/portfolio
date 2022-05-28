@@ -40,9 +40,16 @@ body {
 	font-family: 'Poppins', sans-serif;
 	line-height: 1.6;
 	background-color: var(--clr-bg);
-	min-height: 100vh;
+}
+.App {
+	position: relative;
 	display: grid;
 	align-items: center;
+
+	min-height: 100vh;
+	width: 85%;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 /* navlinks active style */

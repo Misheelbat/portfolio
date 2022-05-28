@@ -1,0 +1,24 @@
+.navbar {
+	position: absolute;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	color: white;
+	right: 0;
+}
+.navbar li {
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 800px) {
+	.navbar {
+		align-items: end;
+		justify-content: center;
+		left: 0;
+	}
+	.navbar ul {
+		display: flex;
+		gap: 1rem;
+		white-space: nowrap;
+	}
+}
