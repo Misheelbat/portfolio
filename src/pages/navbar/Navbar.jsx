@@ -1,10 +1,11 @@
 import React from 'react';
-import { Outlet } from 'react-router-dom';
+import Circles from '../../components/Elements/circle/Circles';
 
 import styles from './navbar.module.css';
 export default function Navbar() {
 	return (
 		<>
+			{/* <Circles /> */}
 			<nav className={styles.navbar}>
 				<ul>
 					<li>Home</li>
@@ -13,7 +14,6 @@ export default function Navbar() {
 					<li>Contacts</li>
 				</ul>
 			</nav>
-			<Outlet />
 		</>
 	);
 }

@@ -1,0 +1,36 @@
+.circleContainer {
+	position: absolute;
+	max-width: 90vw;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	z-index: -1;
+}
+.circle,
+.eclipse {
+	max-width: 90vw;
+}
+.eclipse {
+	position: absolute;
+	right: 0;
+	animation: spin 2s linear 1;
+}
+
+@keyframes spin {
+	0% {
+		transform: rotateZ(0deg);
+	}
+	25% {
+		transform: rotateZ(90deg);
+	}
+	50% {
+		transform: rotateZ(180deg);
+	}
+	75% {
+		transform: rotateZ(270deg);
+	}
+	100% {
+		transform: rotateZ(360deg);
+	}
+}

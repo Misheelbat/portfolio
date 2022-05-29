@@ -1,16 +1,14 @@
-import { Routes, Route } from 'react-router-dom';
-import Home from './pages/home/Home';
+import PageContainer from './components/pagesContainer/PageContainer';
 import Navbar from './pages/navbar/Navbar';
+import Circles from './components/Elements/circle/Circles';
 import './App.css';
 
 function App() {
 	return (
 		<div className="App">
-			<Routes>
-				<Route path="/" element={<Navbar />}>
-					<Route index element={<Home />} />
-				</Route>
-			</Routes>
+			<Circles />
+			<Navbar />
+			<PageContainer />
 		</div>
 	);
 }
