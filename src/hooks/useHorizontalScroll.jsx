@@ -18,7 +18,6 @@ export const useHorizontalScroll = () => {
 					)
 				) {
 					e.preventDefault();
-					console.log(e.deltaY);
 				}
 				if (e.deltaY > 1) {
 					element.scrollTo({

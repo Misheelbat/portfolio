@@ -1,10 +1,13 @@
 import React from 'react';
+import AnimatePage from '../../components/AnimatePage';
 import styles from './projects.module.css';
 
 export default function Projects() {
 	return (
-		<section id="pro" className={styles.projects}>
-			pro
-		</section>
+		<AnimatePage>
+			<section id="pro" className={styles.projects}>
+				pro
+			</section>
+		</AnimatePage>
 	);
 }

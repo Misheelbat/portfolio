@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Circles from '../../components/Elements/circle/Circles';
 
 import styles from './navbar.module.css';
@@ -8,8 +9,12 @@ export default function Navbar() {
 			{/* <Circles /> */}
 			<nav className={styles.navbar}>
 				<ul>
-					<li>Home</li>
-					<li>Projects</li>
+					<li>
+						<Link to="/">Home</Link>
+					</li>
+					<li>
+						<Link to="/projects">Projects</Link>
+					</li>
 					<li>About me</li>
 					<li>Contacts</li>
 				</ul>
