@@ -59,5 +59,6 @@ body {
 
 /* navlinks active style */
 li a.active {
-	border-bottom: 3px solid black;
+	color: #ea98f7;
+	transition: color 0.25s ease-out;
 }

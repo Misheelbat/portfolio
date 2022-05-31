@@ -11,9 +11,9 @@ export default function Home() {
 
 	return (
 		<AnimatePage
-			initial={{ opacity: 1, x: -500 }}
-			animate={{ opacity: 1, x: 0 }}
-			exit={{ opacity: 1, x: -500 }}
+			initial={{ x: -500 }}
+			animate={{ x: 0 }}
+			exit={{ x: -500 }}
 			transition={{ duration: 0.5 }}
 		>
 			<main className={styles.home}>

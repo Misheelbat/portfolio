@@ -11,6 +11,10 @@
 	margin-bottom: 1rem;
 }
 
+.navbar li:hover,
+.navbar li:focus {
+	color: rgba(234, 152, 247, 0.8);
+}
 @media (max-width: 800px) {
 	.navbar {
 		align-items: end;
