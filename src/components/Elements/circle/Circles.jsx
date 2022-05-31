@@ -1,6 +1,6 @@
 import React from 'react';
-import { ReactComponent as Circle } from '../../../assets/circle.svg';
-import { ReactComponent as Eclipse } from '../../../assets/eclipse.svg';
+import { ReactComponent as Circle } from 'assets/circle.svg';
+import { ReactComponent as Eclipse } from 'assets/eclipse.svg';
 
 import styles from './circles.module.css';
 export default function Circles() {

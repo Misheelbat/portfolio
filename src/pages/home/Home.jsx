@@ -1,5 +1,5 @@
 import React from 'react';
-import AnimatePage from '../../components/AnimatePage';
+import AnimatePage from 'components/AnimatePage';
 import styles from './home.module.css';
 
 export default function Home() {

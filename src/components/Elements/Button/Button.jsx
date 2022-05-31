@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ReactComponent as Contact } from '../../../assets/contact.svg';
+import { ReactComponent as Contact } from 'assets/contact.svg';
 
 import styles from './button.module.css';
 export default function Button() {

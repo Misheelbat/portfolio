@@ -1,6 +1,6 @@
 import React from 'react';
-import { ReactComponent as Menu } from '../../../assets/menu.svg';
-import { ReactComponent as CloseMenu } from '../../../assets/closeMenu.svg';
+import { ReactComponent as Menu } from 'assets/menu.svg';
+import { ReactComponent as CloseMenu } from 'assets/closeMenu.svg';
 
 import styles from './menuButton.module.css';
 export default function MenuButton({ open, ...props }) {
