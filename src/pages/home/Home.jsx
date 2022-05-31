@@ -10,7 +10,12 @@ export default function Home() {
 	};
 
 	return (
-		<AnimatePage>
+		<AnimatePage
+			initial={{ opacity: 1, x: -500 }}
+			animate={{ opacity: 1, x: 0 }}
+			exit={{ opacity: 1, x: -500 }}
+			transition={{ duration: 0.5 }}
+		>
 			<main className={styles.home}>
 				<div className={styles.content}>
 					<h1>Automate routine work</h1>
