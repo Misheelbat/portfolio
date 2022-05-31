@@ -2,11 +2,21 @@
 	position: absolute;
 	max-width: 90vw;
 	top: 50%;
+	right: -5vw;
+	transform: translate(50%, -50%);
+	z-index: -1;
+	transition: right 0.5s linear;
+}
+.circleContainer img {
+	overflow: hidden;
+	position: absolute;
+	max-width: 60vw;
+	width: 300px;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	overflow: hidden;
-	z-index: -1;
 }
+
 .circle,
 .eclipse {
 	max-width: 90vw;
@@ -14,21 +24,29 @@
 .eclipse {
 	position: absolute;
 	right: 0;
-	animation: spin 2s linear 1;
+	animation: spin 1s linear 2;
+	transition: transform 0.5s linear;
+}
+
+.circleContainer[data-state='/projects'],
+.circleContainer[data-state='/about'],
+.circleContainer[data-state='/contacts'] {
+	right: calc(100% + 5vw);
+}
+
+.circleContainer[data-state='/projects'] .eclipse {
+	transform: rotateZ(-180deg);
+}
+.circleContainer[data-state='/about'] .eclipse {
+	transform: rotateZ(-240deg);
+}
+.circleContainer[data-state='/contacts'] .eclipse {
+	transform: rotateZ(-120deg);
 }
 
 @keyframes spin {
 	0% {
 		transform: rotateZ(0deg);
-	}
-	25% {
-		transform: rotateZ(90deg);
-	}
-	50% {
-		transform: rotateZ(180deg);
-	}
-	75% {
-		transform: rotateZ(270deg);
 	}
 	100% {
 		transform: rotateZ(360deg);

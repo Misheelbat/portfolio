@@ -21,6 +21,7 @@
 }
 html {
 	scroll-behavior: smooth;
+	overflow: hidden;
 }
 h1,
 ul,
@@ -43,6 +44,8 @@ body {
 	font-family: 'Poppins', sans-serif;
 	line-height: 1.6;
 	background-color: var(--clr-bg);
+	/* background-image: url('assets/space.jpg');
+	background-size: cover; */
 }
 .App {
 	position: relative;
