@@ -1,5 +1,6 @@
 .home {
-	color: white;
+	color: var(--clr-bg);
+	min-width: 100%;
 }
 
 .content {
@@ -14,7 +15,7 @@
 .content p {
 	font-size: 14px;
 	margin-block: 2rem;
-	color: rgba(250, 250, 250, 0.5);
+	color: rgba(0, 0, 0, 0.5);
 }
 .contactBtn {
 	color: black;
@@ -24,6 +25,6 @@
 
 	padding: 0.8rem 2rem;
 	border: 0;
-	border-radius: 1rem;
-	background-color: var(--clr-purple);
+	border-radius: 0.4rem;
+	background-color: var(--clr-green);
 }

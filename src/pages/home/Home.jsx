@@ -3,12 +3,6 @@ import AnimatePage from 'components/AnimatePage';
 import styles from './home.module.css';
 
 export default function Home() {
-	const handleClick = () => {
-		document.querySelector('#pro').scrollIntoView({
-			behavior: 'smooth',
-		});
-	};
-
 	return (
 		<AnimatePage
 			initial={{ x: -500 }}
@@ -23,9 +17,7 @@ export default function Home() {
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, a
 						qui! Dolores doloribus consequatur modi.
 					</p>
-					<button onClick={handleClick} className={styles.contactBtn}>
-						Let's Talk!
-					</button>
+					<button className={styles.contactBtn}>Let's Talk!</button>
 				</div>
 			</main>
 		</AnimatePage>

@@ -3,7 +3,7 @@
 	height: 100vh;
 	display: flex;
 	align-items: center;
-	color: white;
+	color: var(--clr-bg);
 	right: 0;
 	z-index: 100;
 }
