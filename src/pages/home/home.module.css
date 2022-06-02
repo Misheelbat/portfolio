@@ -3,7 +3,8 @@
 	min-width: 100%;
 }
 
-.content {
+.content span {
+	display: block;
 }
 .content h1 {
 	font-size: var(--fs-header);
