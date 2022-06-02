@@ -1,9 +1,10 @@
 .circleContainer {
 	position: absolute;
 	max-width: 90vw;
-	width: 300px;
-	top: 50%;
-	right: 50%;
+	width: 50vh;
+	top: 0;
+	right: -4vw;
+	/* right: 0; */
 	transform: translate(50%, -50%);
 	z-index: -1;
 	transition: right 0.5s linear;
@@ -15,47 +16,47 @@
 	transform: translate(-50%, -50%);
 
 	max-width: 60vw;
-	width: 200px;
+	width: 100px;
 	aspect-ratio: 1;
+	border: 0;
 	border-radius: 50%;
 
 	background-color: white;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	box-shadow: 0 0 40px 20px #fff, 0 0 80px 40px #f0f, 0 0 120px 70px #0ff;
 }
 
 .circle,
 .eclipse {
 	width: 100%;
 }
+
+/* outer circle */
+.circleContainer[data-state='/projects'],
+.circleContainer[data-state='/about'],
+.circleContainer[data-state='/contacts'] {
+	/* right: calc(100% + 4vw); */
+	right: 100%;
+}
+
+/* eclipse */
 .eclipse {
 	position: absolute;
 	right: 0;
 	animation: spin 1s linear 2;
 	transition: transform 0.5s linear;
+	transform: rotateZ(-30deg);
 }
-
-.circleContainer[data-state='/projects'],
-.circleContainer[data-state='/about'],
-.circleContainer[data-state='/contacts'] {
-	/* right: calc(100% + 5vw); */
-	right: 100%;
-}
-.circleContainer[data-state='/projects'] img,
-.circleContainer[data-state='/about'] img,
-.circleContainer[data-state='/contacts'] img {
-	transform: rotateZ(-180deg);
-}
-
 .circleContainer[data-state='/projects'] .eclipse {
-	transform: rotateZ(-180deg);
+	transform: rotateZ(-160deg);
 }
 .circleContainer[data-state='/about'] .eclipse {
-	transform: rotateZ(-240deg);
+	transform: rotateZ(-140deg);
 }
 .circleContainer[data-state='/contacts'] .eclipse {
-	transform: rotateZ(-120deg);
+	transform: rotateZ(-100deg);
 }
 
 @keyframes spin {

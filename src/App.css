@@ -7,7 +7,7 @@
 :root {
 	--clr-bg: #1c1c1c;
 	--clr-green: #c7ecdf;
-	--clr-purple: rgb(218, 196, 247);
+	--clr-purple: #dac4f7;
 
 	--left-space: 10%;
 
@@ -16,7 +16,7 @@
 
 @media (min-width: 700px) {
 	:root {
-		--fs-header: 54px;
+		--fs-header: 64px;
 	}
 }
 html {
@@ -46,11 +46,11 @@ body {
 	background-color: #ebebeb;
 	/* background-image: url('assets/space.jpg');
 	background-size: cover; */
-	position: relative;
 }
 .App {
+	position: relative;
 	height: 100vh;
-	width: 100vw;
+	width: 90vw;
 	max-width: 1200px;
 	margin: 0 auto;
 	display: flex;

@@ -7,16 +7,16 @@ export default function Home() {
 		<AnimatePage
 			initial={{ x: -500 }}
 			animate={{ x: 0 }}
-			exit={{ x: -500 }}
+			exit={{ x: '-100vw' }}
 			transition={{ duration: 0.5 }}
 		>
 			<main className={styles.home}>
 				<div className={styles.content}>
-					<h1>Automate routine work</h1>
-					<p>
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa, a
-						qui! Dolores doloribus consequatur modi.
-					</p>
+					<h1>
+						Hi, i’m John Doe,
+						<br /> a web developer
+						<br /> based in Austria
+					</h1>
 					<button className={styles.contactBtn}>Let's Talk!</button>
 				</div>
 			</main>
