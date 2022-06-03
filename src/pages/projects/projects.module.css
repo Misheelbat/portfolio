@@ -1,3 +1,51 @@
 .projects {
 	background-color: rgba(250, 250, 250, 0.1);
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+
+	overflow: hidden;
+	align-items: center;
+}
+.test {
+	width: 200px;
+	margin: 0 auto;
+	padding: 10px;
+	overflow: hidden;
+}
+.test p {
+	overflow: hidden;
+
+	position: relative;
+	width: 120px;
+	height: 120px;
+	background-color: rgb(219, 131, 131);
+	border-radius: 50%;
+	box-shadow: 60px -60px 0 2px #e5f1fd, -60px -60px 0 2px #e5f1fd,
+		-60px 60px 0 2px #e5f1fd, 60px 60px 0 2px #e5f1fd, 0 0 0 2px #e5f1fd;
+	animation: border 2s linear 1 forwards;
+
+}
+
+@keyframes border {
+	0% {
+		box-shadow: 60px -60px 0 2px #e5f1fd, -60px -60px 0 2px #e5f1fd,
+			-60px 60px 0 2px #e5f1fd, 60px 60px 0 2px #e5f1fd, 0 0 0 2px black;
+	}
+	25% {
+		box-shadow: 0 -125px 0 2px #e5f1fd, -60px -60px 0 2px #e5f1fd,
+			-60px 60px 0 2px #e5f1fd, 60px 60px 0 2px #e5f1fd, 0 0 0 2px black;
+	}
+	50% {
+		box-shadow: 0 -125px 0 2px #e5f1fd, -125px 0px 0 2px #e5f1fd,
+			-60px 60px 0 2px #e5f1fd, 60px 60px 0 2px #e5f1fd, 0 0 0 2px black;
+	}
+	75% {
+		box-shadow: 0 -125px 0 2px #e5f1fd, -125px 0px 0 2px #e5f1fd,
+			0px 125px 0 2px #e5f1fd, 60px 60px 0 2px #e5f1fd, 0 0 0 2px black;
+	}
+	100% {
+		box-shadow: 0 -125px 0 2px #e5f1fd, -125px 0px 0 2px #e5f1fd,
+			0px 125px 0 2px #e5f1fd, 125px 0px 0 2px #e5f1fd, 0 0 0 2px black;
+	}
 }

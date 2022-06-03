@@ -5,8 +5,10 @@ import styles from './projects.module.css';
 export default function Projects() {
 	return (
 		<AnimatePage>
-			<section id="pro" className={styles.projects}>
-				pro
+			<section className={styles.projects}>
+				<div className={styles.test}>
+					<p></p>
+				</div>
 			</section>
 		</AnimatePage>
 	);

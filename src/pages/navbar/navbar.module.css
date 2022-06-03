@@ -1,13 +1,12 @@
 .navbar {
+	color: var(--clr-bg);
 	position: absolute;
-	height: 100vh;
 	display: flex;
 	align-items: center;
-	color: var(--clr-bg);
-	right: 0;
-	align-items: flex-end;
 	justify-content: center;
+	right: 0;
 	left: 0;
+	bottom: 0;
 	z-index: 100;
 }
 .navbar li {

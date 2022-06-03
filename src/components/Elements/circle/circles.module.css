@@ -1,31 +1,13 @@
 .circleContainer {
 	position: absolute;
 	max-width: 90vw;
-	width: 50vh;
-	top: 0;
-	right: -4vw;
-	/* right: 0; */
+	width: 40vh;
+	top: 45%;
+	/* right: -4vw; */
+	right: 15%;
 	transform: translate(50%, -50%);
-	z-index: -1;
-	transition: right 0.5s linear;
-}
-.sun {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-
-	max-width: 60vw;
-	width: 100px;
-	aspect-ratio: 1;
-	border: 0;
-	border-radius: 50%;
-
-	background-color: white;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-shadow: 0 0 40px 20px #fff, 0 0 80px 40px #f0f, 0 0 120px 70px #0ff;
+	transition: right 0.5s ease-in;
+	z-index: 10;
 }
 
 .circle,
@@ -33,7 +15,7 @@
 	width: 100%;
 }
 
-/* outer circle */
+/* move to the left side of screen */
 .circleContainer[data-state='/projects'],
 .circleContainer[data-state='/about'],
 .circleContainer[data-state='/contacts'] {
@@ -45,18 +27,21 @@
 .eclipse {
 	position: absolute;
 	right: 0;
+	opacity: 0;
 	animation: spin 1s linear 2;
-	transition: transform 0.5s linear;
-	transform: rotateZ(-30deg);
+	transition: transform 0.6s linear, opacity 0.6s linear;
 }
 .circleContainer[data-state='/projects'] .eclipse {
-	transform: rotateZ(-160deg);
+	opacity: 1;
+	transform: rotateZ(-200deg);
 }
 .circleContainer[data-state='/about'] .eclipse {
-	transform: rotateZ(-140deg);
+	opacity: 1;
+	transform: rotateZ(-175deg);
 }
 .circleContainer[data-state='/contacts'] .eclipse {
-	transform: rotateZ(-100deg);
+	opacity: 1;
+	transform: rotateZ(-130deg);
 }
 
 @keyframes spin {
@@ -66,4 +51,102 @@
 	100% {
 		transform: rotateZ(360deg);
 	}
+}
+/*      */
+
+/* button */
+.btn {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	max-width: 60vw;
+	min-width: 150px;
+	min-height: 150px;
+
+	aspect-ratio: 1;
+	border: 0;
+	border-radius: 50%;
+
+	background-color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 11;
+}
+.btn:before {
+	content: '';
+	background-color: rgba(155, 153, 153, 0.4);
+	position: absolute;
+	top: 110%;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	transform: rotateX(85deg);
+	filter: blur(1em);
+}
+
+.play {
+	width: 60px;
+	height: 60px;
+	transition: transform 0.5s ease;
+}
+.btn:hover .play {
+	transform: rotateZ(360deg);
+}
+
+/* button border */
+
+.border {
+	position: absolute;
+	width: 154px;
+	height: 154px;
+	background-color: transparent;
+	border-radius: 100%;
+	z-index: 500;
+}
+.circleBorder {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	background: none;
+	border: 0;
+	border: 100%;
+}
+.circleBorder::before,
+.circleBorder::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+	top: 0;
+	left: 0;
+}
+.circleBorder:hover {
+	color: var(--clr-purple);
+}
+.circleBorder::before {
+	border: 4px solid transparent;
+}
+.circleBorder:hover::before {
+	border-top-color: var(--clr-purple);
+	border-right-color: var(--clr-purple);
+	border-bottom-color: var(--clr-purple);
+	/* border-left-color: var(--clr-purple); */
+	transition: border-top-color 0.15s linear,
+		border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+}
+.circleBorder::after {
+	border: 0px solid transparent;
+}
+.circleBorder:hover::after {
+	border-top: 4px solid var(--clr-purple);
+	border-left-width: 4px;
+	border-right-width: 4px;
+	transform: rotate(270deg);
+	transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
 }

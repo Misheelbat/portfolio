@@ -1,6 +1,6 @@
 import React from 'react';
-
 import { motion } from 'framer-motion';
+
 const container = {
 	hidden: { y: '90vw' },
 	show: {
@@ -18,8 +18,8 @@ export default function AnimatePage({ children, ...props }) {
 			initial="hidden"
 			animate="show"
 			exit="away"
+			transition={{ duration: 0.5, ease: 'backInOut' }}
 			{...props}
-			// transition={{ duration: 0.5 }}
 		>
 			{children}
 		</motion.div>

@@ -1,6 +1,35 @@
 .home {
 	color: var(--clr-bg);
-	min-width: 100%;
+	position: relative;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	margin-top: 2rem;
+	align-items: flex-start;
+}
+.header > span:nth-of-type(1) {
+	font-weight: bold;
+	font-size: 34px;
+	line-height: 1;
+	margin-right: 6rem;
+}
+.header > span:nth-of-type(2) {
+	font-size: 20px;
+}
+.header p {
+	margin-left: auto;
+}
+.header p > span {
+	display: block;
+	font-size: 20px;
+	line-height: 1.1;
 }
 
 .content span {
@@ -9,19 +38,12 @@
 .content h1 {
 	font-size: var(--fs-header);
 	font-weight: 700;
-	max-width: 670px;
 	line-height: 1.1;
 }
-.content p {
-	font-size: 14px;
-	margin-block: 2rem;
-	color: rgba(0, 0, 0, 0.5);
-}
+
 .contactBtn {
 	color: black;
-	font-weight: 700;
 	font-size: 20px;
-
 	text-transform: uppercase;
 	cursor: pointer;
 
@@ -30,5 +52,5 @@
 	border-radius: 0.4rem;
 	background-color: var(--clr-green);
 	margin-top: 2rem;
-	box-shadow: 4px 4px 1em 0 rgba(199, 236, 223);
+	/* box-shadow: 4px 4px 1em 0 rgba(199, 236, 223); */
 }

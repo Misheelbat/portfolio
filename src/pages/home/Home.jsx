@@ -1,5 +1,5 @@
 import React from 'react';
-import { animate, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import AnimatePage from 'components/AnimatePage';
 import styles from './home.module.css';
 
@@ -18,7 +18,7 @@ const container = {
 	show: {
 		x: 0,
 		transition: {
-			staggerChildren: 0.3,
+			staggerChildren: 0.2,
 		},
 	},
 	away: { x: '-100vw' },
@@ -27,12 +27,17 @@ export default function Home() {
 	return (
 		<AnimatePage
 			variants={container}
-			initial="hidden"
-			animate="show"
-			exit="away"
 			transition={{ duration: 0.5, ease: 'backInOut' }}
 		>
-			<main>
+			<main className={styles.home}>
+				<div className={styles.header}>
+					<span>00</span>
+					<span>PORTFOLIO</span>
+					<p>
+						<span>BATJARGAL</span>
+						<span>MISHEEL</span>
+					</p>
+				</div>
 				<div className={styles.content}>
 					<h1>
 						<motion.span variants={item}>Hi, i’m John Doe,</motion.span>
