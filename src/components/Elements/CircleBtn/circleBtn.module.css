@@ -4,7 +4,7 @@
 	align-items: center;
 	position: absolute;
 	top: 46%;
-	left: 80%;
+	left: 85%;
 	transform: translate(-50%, -50%);
 
 	width: 150px;
@@ -94,19 +94,17 @@
 	transform: rotate(270deg);
 	transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
 }
+
 @media (max-width: 500px) {
 	.circleContainer {
 		right: 50%;
 		top: 80%;
 	}
 }
-@media (max-width: 700px) {
+
+@media (max-width: 800px) {
 	.btn {
-		width: 100px;
-		height: 100px;
-	}
-	.play {
-		width: 40px;
-		height: 40px;
+		left: 50%;
+		top: 75%;
 	}
 }

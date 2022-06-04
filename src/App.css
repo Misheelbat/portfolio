@@ -10,11 +10,18 @@
 	--clr-purple: #dac4f7;
 
 	--left-space: 10%;
+	--fs-header: 38px;
 
-	--fs-header: 34px;
+	--max-width: 90vw;
 }
 
 @media (min-width: 700px) {
+	:root {
+		--fs-header: 54px;
+		--max-width: 80vw;
+	}
+}
+@media (min-width: 900px) {
 	:root {
 		--fs-header: 64px;
 	}
@@ -49,7 +56,7 @@ body {
 .App {
 	position: relative;
 	min-height: 100vh;
-	width: 80vw;
+	width: var(--max-width);
 	max-width: 1200px;
 	margin: 0 auto;
 }

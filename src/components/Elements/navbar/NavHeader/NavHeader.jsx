@@ -1,13 +1,14 @@
 import React from 'react';
-import { useGetPageNumber } from 'hooks/useGetPageNumber';
+import { useGetPageInfo } from 'hooks/useGetPageInfo';
 
 import styles from './navHeader.module.css';
 export default function NavHeader() {
-	const pageNumber = useGetPageNumber();
+	const pageInfo = useGetPageInfo();
+	
 	return (
 		<div className={styles.header}>
-			<span>{pageNumber}</span>
-			<span>PORTFOLIO</span>
+			<span>{pageInfo.number}</span>
+			<span>{pageInfo.page}</span>
 			<p>
 				<span>BATJARGAL</span>
 				<span>MISHEEL</span>
