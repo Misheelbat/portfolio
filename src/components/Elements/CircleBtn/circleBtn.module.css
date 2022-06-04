@@ -1,0 +1,112 @@
+.btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 46%;
+	left: 80%;
+	transform: translate(-50%, -50%);
+
+	width: 150px;
+	height: 150px;
+	border: 0;
+	border-radius: 37px;
+	/* 
+	box-shadow: inset 10px 10px 25px rgba(195, 205, 221, 0.7),
+		inset -10px -10px 25px #ffffff; */
+
+	box-shadow: inset 18px 18px 30px rgba(195, 205, 221, 0.7),
+		inset -18px -18px 30px #ffffff;
+}
+.play {
+	width: 60px;
+	height: 60px;
+	transition: transform 0.5s ease;
+}
+.btn:hover .play {
+	transform: rotateZ(360deg);
+}
+
+/* shadow bottom */
+.btn:before {
+	content: '';
+	background-color: rgba(155, 153, 153, 0.4);
+	position: absolute;
+	top: 70%;
+
+	width: 60px;
+	height: 100%;
+	border-radius: 50%;
+	transform: rotateX(85deg);
+	filter: blur(1em);
+}
+
+/* button border */
+
+.border {
+	position: absolute;
+	width: 153px;
+	height: 153px;
+	background-color: transparent;
+	border-radius: 50%;
+	z-index: 500;
+}
+.circleBorder {
+	position: relative;
+	width: 100%;
+	height: 100%;
+
+	background: none;
+	border: 0;
+	border-radius: 50%;
+}
+.circleBorder::before,
+.circleBorder::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	top: 0;
+	left: 0;
+}
+.circleBorder:hover {
+	color: var(--clr-purple);
+}
+.circleBorder::before {
+	border: 2px solid transparent;
+}
+.circleBorder:hover::before {
+	border-top-color: var(--clr-purple);
+	border-right-color: var(--clr-purple);
+	border-bottom-color: var(--clr-purple);
+	/* border-left-color: var(--clr-purple); */
+	transition: border-top-color 0.15s linear,
+		border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+}
+.circleBorder::after {
+	border: 0px solid transparent;
+}
+.circleBorder:hover::after {
+	border-top: 2px solid var(--clr-purple);
+	border-left-width: 2px;
+	border-right-width: 2px;
+	transform: rotate(270deg);
+	transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+}
+@media (max-width: 500px) {
+	.circleContainer {
+		right: 50%;
+		top: 80%;
+	}
+}
+@media (max-width: 700px) {
+	.btn {
+		width: 100px;
+		height: 100px;
+	}
+	.play {
+		width: 40px;
+		height: 40px;
+	}
+}

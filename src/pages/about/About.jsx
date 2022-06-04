@@ -1,5 +1,5 @@
 import React from 'react';
-import AnimatePage from 'components/AnimatePage';
+import AnimatePage from 'components/Layout/AnimatePage';
 import styles from './about.module.css';
 
 export default function About() {

@@ -1,6 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import AnimatePage from 'components/AnimatePage';
+import AnimatePage from 'components/Layout/AnimatePage';
+
+import CircleBtn from 'components/Elements/CircleBtn/CircleBtn';
+
 import styles from './home.module.css';
 
 const item = {
@@ -30,14 +33,6 @@ export default function Home() {
 			transition={{ duration: 0.5, ease: 'backInOut' }}
 		>
 			<main className={styles.home}>
-				<div className={styles.header}>
-					<span>00</span>
-					<span>PORTFOLIO</span>
-					<p>
-						<span>BATJARGAL</span>
-						<span>MISHEEL</span>
-					</p>
-				</div>
 				<div className={styles.content}>
 					<h1>
 						<motion.span variants={item}>Hi, i’m John Doe,</motion.span>
@@ -48,6 +43,7 @@ export default function Home() {
 						Let's Talk!
 					</motion.button>
 				</div>
+				<CircleBtn />
 			</main>
 		</AnimatePage>
 	);

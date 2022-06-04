@@ -5,32 +5,6 @@
 	display: flex;
 	align-items: center;
 }
-.header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	display: flex;
-	margin-top: 2rem;
-	align-items: flex-start;
-}
-.header > span:nth-of-type(1) {
-	font-weight: bold;
-	font-size: 34px;
-	line-height: 1;
-	margin-right: 6rem;
-}
-.header > span:nth-of-type(2) {
-	font-size: 20px;
-}
-.header p {
-	margin-left: auto;
-}
-.header p > span {
-	display: block;
-	font-size: 20px;
-	line-height: 1.1;
-}
 
 .content span {
 	display: block;
@@ -52,5 +26,6 @@
 	border-radius: 0.4rem;
 	background-color: var(--clr-green);
 	margin-top: 2rem;
-	/* box-shadow: 4px 4px 1em 0 rgba(199, 236, 223); */
+	box-shadow: -18px -18px 30px 10px rgba(255, 255, 255, 0.5),
+		18px 18px 30px rgba(195, 205, 221, 0.6);
 }
