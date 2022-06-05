@@ -32,6 +32,10 @@
 .image {
 	width: calc(-17.5px + 65%);
 	aspect-ratio: 1.6;
+	transition: transform 0.3s ease-out;
+}
+.image:hover {
+	transform: rotateZ(5deg);
 }
 .info {
 	display: flex;
