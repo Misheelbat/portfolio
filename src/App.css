@@ -15,7 +15,7 @@
 	--max-width: 90vw;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
 	:root {
 		--fs-header: 54px;
 		--max-width: 80vw;
@@ -42,7 +42,7 @@ a {
 	color: inherit;
 }
 body {
-	overflow: hidden;
+	/* overflow: hidden; */
 	margin: 0;
 	padding: 0;
 	font-size: 16px;

@@ -1,21 +1,19 @@
+/* Typography */
+.projects {
+	color: var(--clr-bg);
+}
+
+/* Layout */
+
 .projects {
 	width: 100%;
-}
-.card {
-	width: 100%;
-
 	display: flex;
-	gap: 2rem;
-	padding-top: 25%;
+	align-items: center;
+	flex-direction: column;
 }
-.image {
-	width: calc(-17.5px + 60%);
-	max-width: 800px;
-	background-color: var(--clr-purple);
-	aspect-ratio: 1.5;
-	/* height: 30vw; */
-	/* max-height: 400px; */
+.projects > * {
+	padding-bottom: 8rem;
 }
-.info {
-	/* width: 40%; */
+.projects:first-child {
+	padding-top: 15rem;
 }

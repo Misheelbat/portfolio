@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-import NavHeader from './NavHeader/NavHeader';
+import NavHeader from 'components/Elements/navbar/NavHeader/NavHeader';
 
 import styles from './navbar.module.css';
 export default function Navbar() {
