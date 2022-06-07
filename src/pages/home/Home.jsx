@@ -40,7 +40,7 @@ export default function Home() {
 						<motion.span variants={item}>a web developer </motion.span>
 						<motion.span variants={item}>based in Austria</motion.span>
 					</h1>
-					<Link to="/about">
+					<Link to="/contacts">
 						<motion.div variants={item} className={styles.contactBtn}>
 							Let's Talk!
 						</motion.div>
