@@ -1,6 +1,6 @@
 .navbar {
 	color: var(--clr-bg);
-	position: absolute;
+	position: fixed;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -21,16 +21,4 @@
 .navbar li:hover,
 .navbar li:focus {
 	color: rgba(234, 152, 247, 0.8);
-}
-@media (max-width: 800px) {
-	.navbar {
-		align-items: end;
-		justify-content: center;
-		left: 0;
-	}
-	.navbar ul {
-		display: flex;
-		gap: 1rem;
-		white-space: nowrap;
-	}
 }
