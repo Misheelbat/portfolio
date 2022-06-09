@@ -1,6 +1,8 @@
 import React from 'react';
 import AnimatePage from 'components/Layout/AnimatePage';
-import profile from 'assets/photo.jpg';
+
+import RightArrow from 'assets/right-arrow.svg';
+import profileImg from 'assets/photo.jpg';
 import styles from './about.module.css';
 
 export default function About() {
@@ -18,9 +20,54 @@ export default function About() {
 							I'm a creative developer with years of experience in building
 							products and appealing web experiences.
 						</p>
-						<img src={profile} alt="profile" />
+						<img src={profileImg} alt="profile" />
 					</div>
 				</header>
+				<div className={styles.ball} />
+				<div className={styles.skills}>
+					<h2>
+						<img src={RightArrow} alt="arrow pointing right" />
+						My skills set
+					</h2>
+					<div className={styles.skillsContainer}>
+						<div className={styles.skillsSet}>
+							<div>
+								<h3>html && css</h3>
+								<p>
+									I am a pretty chill person. I like being with friends,
+									surfing, playing videogames and going to the gym{' '}
+								</p>
+							</div>
+						</div>
+						<div className={styles.skillsSet}>
+							<div>
+								<h3>ReactJS</h3>
+								<p>
+									I am a pretty chill person. I like being with friends,
+									surfing, playing videogames and going to the gym{' '}
+								</p>
+							</div>
+						</div>
+						<div className={styles.skillsSet}>
+							<div>
+								<h3>Javascript</h3>
+								<p>
+									I am a pretty chill person. I like being with friends,
+									surfing, playing videogames and going to the gym{' '}
+								</p>
+							</div>
+						</div>
+						<div className={styles.skillsSet}>
+							<div>
+								<h3>Others</h3>
+								<p>
+									I am a pretty chill person. I like being with friends,
+									surfing, playing videogames and going to the gym{' '}
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
 				<div className={styles.ball} />
 			</section>
 		</AnimatePage>
