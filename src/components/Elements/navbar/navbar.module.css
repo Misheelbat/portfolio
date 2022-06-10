@@ -1,13 +1,13 @@
 .navbar {
-	color: var(--clr-bg);
-	position: fixed;
 	display: flex;
+	position: fixed;
 	align-items: center;
 	justify-content: center;
 	right: 0;
 	left: 0;
 	bottom: 0;
 	z-index: 100;
+	color: var(--clr-bg);
 }
 .navbar li {
 	margin-bottom: 1rem;
@@ -21,4 +21,10 @@
 .navbar li:hover,
 .navbar li:focus {
 	color: rgba(234, 152, 247, 0.8);
+}
+@media (min-width: 700px) {
+	.navbar ul {
+		gap: 2rem;
+		font-size: calc(clamp(1.55em, 2.3vw, 2.5em) * 0.7);
+	}
 }

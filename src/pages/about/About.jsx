@@ -1,7 +1,6 @@
 import React from 'react';
 import AnimatePage from 'components/Layout/AnimatePage';
-
-import RightArrow from 'assets/right-arrow.svg';
+import ContactMe from 'components/Elements/contact/ContactMe';
 import profileImg from 'assets/photo.jpg';
 import styles from './about.module.css';
 
@@ -25,10 +24,7 @@ export default function About() {
 				</header>
 				<div className={styles.ball} />
 				<div className={styles.skills}>
-					<h2>
-						<img src={RightArrow} alt="arrow pointing right" />
-						My skills set
-					</h2>
+					<h2 className={styles.subheader}>My skills set</h2>
 					<div className={styles.skillsContainer}>
 						<div className={styles.skillsSet}>
 							<div>
@@ -69,6 +65,7 @@ export default function About() {
 					</div>
 				</div>
 				<div className={styles.ball} />
+				<ContactMe />
 			</section>
 		</AnimatePage>
 	);
