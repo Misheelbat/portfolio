@@ -27,40 +27,40 @@ export default function About() {
 					<h2 className={styles.subheader}>My skills set</h2>
 					<div className={styles.skillsContainer}>
 						<div className={styles.skillsSet}>
-							<div>
-								<h3>html && css</h3>
-								<p>
-									I am a pretty chill person. I like being with friends,
-									surfing, playing videogames and going to the gym{' '}
-								</p>
-							</div>
+							<h5>01</h5>
+							<div className={styles.skillsSetBorder} />
+							<h3>html && css</h3>
+							<p>
+								I am a pretty chill person. I like being with friends, surfing,
+								playing videogames and going to the gym{' '}
+							</p>
 						</div>
 						<div className={styles.skillsSet}>
-							<div>
-								<h3>ReactJS</h3>
-								<p>
-									I am a pretty chill person. I like being with friends,
-									surfing, playing videogames and going to the gym{' '}
-								</p>
-							</div>
+							<h5>02</h5>
+							<div className={styles.skillsSetBorder} />
+							<h3>ReactJS</h3>
+							<p>
+								I am a pretty chill person. I like being with friends, surfing,
+								playing videogames and going to the gym{' '}
+							</p>
 						</div>
 						<div className={styles.skillsSet}>
-							<div>
-								<h3>Javascript</h3>
-								<p>
-									I am a pretty chill person. I like being with friends,
-									surfing, playing videogames and going to the gym{' '}
-								</p>
-							</div>
+							<h5>03</h5>
+							<div className={styles.skillsSetBorder} />
+							<h3>Javascript</h3>
+							<p>
+								I am a pretty chill person. I like being with friends, surfing,
+								playing videogames and going to the gym{' '}
+							</p>
 						</div>
 						<div className={styles.skillsSet}>
-							<div>
-								<h3>Others</h3>
-								<p>
-									I am a pretty chill person. I like being with friends,
-									surfing, playing videogames and going to the gym{' '}
-								</p>
-							</div>
+							<h5>04</h5>
+							<div className={styles.skillsSetBorder} />
+							<h3>Others</h3>
+							<p>
+								I am a pretty chill person. I like being with friends, surfing,
+								playing videogames and going to the gym{' '}
+							</p>
 						</div>
 					</div>
 				</div>

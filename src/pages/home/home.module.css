@@ -11,10 +11,10 @@
 }
 .content h1 {
 	font-size: var(--fs-header);
-	font-weight: 700;
+	font-weight: 400;
 	line-height: 1.1;
 }
-
+/* 
 .contactBtn {
 	display: inline-block;
 	color: black;
@@ -28,4 +28,4 @@
 	margin-top: 2rem;
 	box-shadow: -18px -18px 30px 10px rgba(255, 255, 255, 0.5),
 		18px 18px 30px rgba(195, 205, 221, 0.6);
-}
+} */

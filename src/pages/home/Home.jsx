@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import AnimatePage from 'components/Layout/AnimatePage';
 
@@ -40,11 +39,6 @@ export default function Home() {
 						<motion.span variants={item}>a web developer </motion.span>
 						<motion.span variants={item}>based in Austria</motion.span>
 					</h1>
-					<Link to="/contacts">
-						<motion.div variants={item} className={styles.contactBtn}>
-							Let's Talk!
-						</motion.div>
-					</Link>
 				</div>
 				<CircleBtn />
 			</main>

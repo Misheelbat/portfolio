@@ -5,8 +5,10 @@
 }
 :root {
 	--clr-bg: #1c1c1c;
+	--clr-text: #1c1d20;
 	--clr-green: #c7ecdf;
 	--clr-purple: #dac4f7;
+	--clr-border-light: rgba(28, 29, 32, 0.3);
 
 	--section-spacing: clamp(5em, 21vh, 12em);
 	--body-spacing: clamp(2.5em, 8vw, 8em);
@@ -38,6 +40,8 @@ img {
 h1,
 h2,
 h3,
+h4,
+h5,
 ul,
 li,
 p {

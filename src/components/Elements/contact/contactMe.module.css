@@ -1,29 +1,25 @@
 .contact {
-	border-bottom: 1px solid #1c1c1c;
+	border-bottom: 1px solid var(--clr-border-light);
 	margin-bottom: var(--section-spacing);
 }
 
-.contact div {
-	display: flex;
-	padding-block: 1rem 2rem;
-	overflow-x: hidden;
-}
-
-.contact span {
+.contactsContainer span {
 	font-size: clamp(1.55em, 2.3vw, 2.5em);
 	display: flex;
 	align-items: center;
 	white-space: nowrap;
 	font-family: 'Poppins', sans-serif;
+	transition: transform 250ms ease-out;
+	cursor: pointer;
 }
 
-.contact span::before {
+.contactsContainer span::before {
 	content: '';
-	width: 30px;
-	height: 30px;
+	width: 15px;
+	height: 15px;
 	background-color: #1c1c1c;
 	border-radius: 50%;
-	margin: 0 2rem;
+	margin: 0 1rem;
 }
 .subheader {
 	font-size: calc(clamp(3em, 5vw, 4.5em) * 0.75);
@@ -36,5 +32,48 @@
 	content: '';
 	width: 100%;
 	height: 1px;
-	background-color: #1c1c1c;
+	background-color: var(--clr-border-light);
+}
+.contactsContent1,
+.contactsContent2 {
+	display: flex;
+	width: 100%;
+}
+.contactsContainer {
+	width: fit-content;
+	display: flex;
+	padding-block: 1em 2em;
+}
+
+.contactsContent1 {
+	animation: slide 20s linear infinite;
+	animation-delay: -20s;
+}
+.contactsContent2 {
+	animation: slide2 20s linear infinite;
+	animation-delay: -10s;
+}
+@keyframes slide {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+@keyframes slide2 {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-200%);
+	}
+}
+.contactsContainer:hover .contactsContent1,
+.contactsContainer:hover .contactsContent2 {
+	animation-play-state: paused;
+}
+.contactsContainer span:hover {
+	color: rgba(28, 29, 32, 0.8);
+	transform: scale(1.04);
 }
