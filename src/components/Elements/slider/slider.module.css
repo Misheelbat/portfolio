@@ -1,0 +1,47 @@
+.slider {
+	padding: calc(var(--section-spacing) / 2) 0;
+}
+.sliderContainer img {
+	display: block;
+	width: fit-content;
+	height: fit-content;
+	object-fit: cover;
+	margin: 0 2rem;
+}
+
+.sliderContainer {
+	display: flex;
+	width: fit-content;
+}
+
+.sliderContent1,
+.sliderContent2 {
+	flex: 1 0 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+}
+.sliderContent1 {
+	animation: slide 40s linear infinite;
+	animation-delay: -40s;
+}
+.sliderContent2 {
+	animation: slide2 40s linear infinite;
+	animation-delay: -20s;
+}
+@keyframes slide {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+@keyframes slide2 {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-200%);
+	}
+}

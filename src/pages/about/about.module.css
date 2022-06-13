@@ -95,7 +95,6 @@
 	align-items: center;
 	white-space: nowrap;
 	gap: 1rem;
-	padding-bottom: calc(var(--section-spacing) / 4);
 }
 .subheader::after {
 	content: '';

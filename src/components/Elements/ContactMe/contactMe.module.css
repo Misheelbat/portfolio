@@ -19,7 +19,7 @@
 	height: 15px;
 	background-color: #1c1c1c;
 	border-radius: 50%;
-	margin: 0 1rem;
+	margin: 0 2rem;
 }
 .subheader {
 	font-size: calc(clamp(3em, 5vw, 4.5em) * 0.75);
@@ -42,7 +42,7 @@
 .contactsContainer {
 	width: fit-content;
 	display: flex;
-	padding-block: 1em 2em;
+	padding-block: calc(var(--section-spacing) / 3);
 }
 
 .contactsContent1 {

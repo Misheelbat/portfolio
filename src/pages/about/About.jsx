@@ -1,6 +1,8 @@
 import React from 'react';
 import AnimatePage from 'components/Layout/AnimatePage';
-import ContactMe from 'components/Elements/contact/ContactMe';
+
+import Slider from 'components/Elements/slider/Slider';
+import ContactMe from 'components/Elements/ContactMe/ContactMe';
 import profileImg from 'assets/photo.jpg';
 import styles from './about.module.css';
 
@@ -25,43 +27,44 @@ export default function About() {
 				<div className={styles.ball} />
 				<div className={styles.skills}>
 					<h2 className={styles.subheader}>My skills set</h2>
+					<Slider />
 					<div className={styles.skillsContainer}>
-						<div className={styles.skillsSet}>
+						<article className={styles.skillsSet}>
 							<h5>01</h5>
 							<div className={styles.skillsSetBorder} />
 							<h3>html && css</h3>
 							<p>
 								I am a pretty chill person. I like being with friends, surfing,
-								playing videogames and going to the gym{' '}
+								playing videogames and going to the gym
 							</p>
-						</div>
-						<div className={styles.skillsSet}>
+						</article>
+						<article className={styles.skillsSet}>
 							<h5>02</h5>
 							<div className={styles.skillsSetBorder} />
 							<h3>ReactJS</h3>
 							<p>
 								I am a pretty chill person. I like being with friends, surfing,
-								playing videogames and going to the gym{' '}
+								playing videogames and going to the gym
 							</p>
-						</div>
-						<div className={styles.skillsSet}>
+						</article>
+						<article className={styles.skillsSet}>
 							<h5>03</h5>
 							<div className={styles.skillsSetBorder} />
 							<h3>Javascript</h3>
 							<p>
 								I am a pretty chill person. I like being with friends, surfing,
-								playing videogames and going to the gym{' '}
+								playing videogames and going to the gym
 							</p>
-						</div>
-						<div className={styles.skillsSet}>
+						</article>
+						<article className={styles.skillsSet}>
 							<h5>04</h5>
 							<div className={styles.skillsSetBorder} />
 							<h3>Others</h3>
 							<p>
 								I am a pretty chill person. I like being with friends, surfing,
-								playing videogames and going to the gym{' '}
+								playing videogames and going to the gym
 							</p>
-						</div>
+						</article>
 					</div>
 				</div>
 				<div className={styles.ball} />
