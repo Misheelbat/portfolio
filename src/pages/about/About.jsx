@@ -30,40 +30,48 @@ export default function About() {
 					<Slider />
 					<div className={styles.skillsContainer}>
 						<article className={styles.skillsSet}>
-							<h5>01</h5>
-							<div className={styles.skillsSetBorder} />
-							<h3>html && css</h3>
-							<p>
-								I am a pretty chill person. I like being with friends, surfing,
-								playing videogames and going to the gym
-							</p>
+							<div>
+								<h5>01</h5>
+								<div className={styles.skillsSetBorder} />
+								<h3>html && css</h3>
+								<p>
+									I am a pretty chill person. I like being with friends,
+									surfing, playing videogames and going to the gym
+								</p>
+							</div>
 						</article>
 						<article className={styles.skillsSet}>
-							<h5>02</h5>
-							<div className={styles.skillsSetBorder} />
-							<h3>ReactJS</h3>
-							<p>
-								I am a pretty chill person. I like being with friends, surfing,
-								playing videogames and going to the gym
-							</p>
+							<div>
+								<h5>02</h5>
+								<div className={styles.skillsSetBorder} />
+								<h3>ReactJS</h3>
+								<p>
+									I am a pretty chill person. I like being with friends,
+									surfing, playing videogames and going to the gym
+								</p>
+							</div>
 						</article>
 						<article className={styles.skillsSet}>
-							<h5>03</h5>
-							<div className={styles.skillsSetBorder} />
-							<h3>Javascript</h3>
-							<p>
-								I am a pretty chill person. I like being with friends, surfing,
-								playing videogames and going to the gym
-							</p>
+							<div>
+								<h5>03</h5>
+								<div className={styles.skillsSetBorder} />
+								<h3>Javascript</h3>
+								<p>
+									I am a pretty chill person. I like being with friends,
+									surfing, playing videogames and going to the gym
+								</p>
+							</div>
 						</article>
 						<article className={styles.skillsSet}>
-							<h5>04</h5>
-							<div className={styles.skillsSetBorder} />
-							<h3>Others</h3>
-							<p>
-								I am a pretty chill person. I like being with friends, surfing,
-								playing videogames and going to the gym
-							</p>
+							<div>
+								<h5>04</h5>
+								<div className={styles.skillsSetBorder} />
+								<h3>Others</h3>
+								<p>
+									I am a pretty chill person. I like being with friends,
+									surfing, playing videogames and going to the gym
+								</p>
+							</div>
 						</article>
 					</div>
 				</div>

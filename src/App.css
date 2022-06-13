@@ -10,9 +10,12 @@
 	--clr-purple: #dac4f7;
 	--clr-border-light: rgba(28, 29, 32, 0.3);
 
+	--fs-header: 38px;
+
+	--ff-primary: 'Poppins', sans-serif;
+	--ff-secondary: 'Prata', sans-serif;
 	--section-spacing: clamp(5em, 21vh, 12em);
 	--body-spacing: clamp(2.5em, 8vw, 8em);
-	--fs-header: 38px;
 }
 @media (max-width: 550px) {
 	:root {
@@ -59,7 +62,7 @@ body {
 	margin: 0;
 	padding: 0 var(--body-spacing);
 	font-size: clamp(16px, 1.2vw, 19px);
-	font-family: 'Poppins', sans-serif;
+	font-family: var(--ff-primary);
 	line-height: 1.6;
 	background: linear-gradient(
 		113.87deg,

@@ -14,7 +14,10 @@ function App() {
 	return (
 		<div className="App">
 			<Navbar />
-			<AnimatePresence exitBeforeEnter>
+			<AnimatePresence
+				exitBeforeEnter
+				onExitComplete={() => window.scrollTo(0, 0)}
+			>
 				<Routes key={location.pathname} location={location}>
 					<Route path="/" element={<Home />} />
 					<Route path="/projects" element={<Projects />} />

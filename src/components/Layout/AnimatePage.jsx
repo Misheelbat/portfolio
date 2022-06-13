@@ -2,14 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const container = {
-	hidden: { y: '90vw' },
+	hidden: { opacity: 0, y: 300 },
 	show: {
+		opacity: 1,
 		y: 0,
 		transition: {
 			duration: 0.5,
 		},
 	},
-	away: { y: -1000 },
+	away: { opacity: 0, y: -300 },
 };
 export default function AnimatePage({ children, ...props }) {
 	return (

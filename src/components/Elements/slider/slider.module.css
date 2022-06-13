@@ -7,6 +7,8 @@
 	height: fit-content;
 	object-fit: cover;
 	margin: 0 2rem;
+	filter: drop-shadow(0px 4px 4px rgba(51, 51, 51, 0.04))
+		drop-shadow(0px 14px 24px rgba(51, 51, 51, 0.12));
 }
 
 .sliderContainer {

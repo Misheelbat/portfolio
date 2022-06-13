@@ -9,6 +9,7 @@ export default function Projects() {
 	return (
 		<AnimatePage>
 			<section className={styles.projects}>
+				<header>Featured Projects</header>
 				<ProjectCard>
 					<h1>The Color of Space</h1>
 					<span>A Multimedia company landing website</span>

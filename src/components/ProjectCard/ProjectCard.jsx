@@ -16,7 +16,7 @@ export default function ProjectCard({
 		<div className={cx(styles.card, styles[type])}>
 			<div className={styles.image}></div>
 			<div className={styles.info}>
-				<p>RECENT PROJECTS</p>
+				<p>RECENT PROJECT</p>
 				{children}
 			</div>
 		</div>

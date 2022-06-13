@@ -8,7 +8,7 @@
 	display: flex;
 	align-items: center;
 	white-space: nowrap;
-	font-family: 'Poppins', sans-serif;
+	font-family: var(--ff-primary);
 	transition: transform 250ms ease-out;
 	cursor: pointer;
 }

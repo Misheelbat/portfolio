@@ -7,24 +7,27 @@ import CircleBtn from 'components/Elements/CircleBtn/CircleBtn';
 import styles from './home.module.css';
 
 const item = {
-	hidden: { x: -1000 },
+	hidden: { opacity: 0, x: -300 },
 	show: {
+		opacity: 1,
 		x: 0,
 		transition: {
 			type: 'spring',
 			bounce: 0.1,
 		},
 	},
+	away: { opacity: 0, x: -300 },
 };
 const container = {
-	hidden: { x: -1000 },
+	hidden: { opacity: 0, x: -400 },
 	show: {
+		opacity: 1,
 		x: 0,
 		transition: {
 			staggerChildren: 0.2,
 		},
 	},
-	away: { x: '-100vw' },
+	away: { opacity: 0, x: '-100vw' },
 };
 export default function Home() {
 	return (
