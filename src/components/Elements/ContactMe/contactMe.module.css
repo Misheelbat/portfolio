@@ -15,6 +15,7 @@
 
 .contactsContainer span::before {
 	content: '';
+	display: block;
 	width: 15px;
 	height: 15px;
 	background-color: #1c1c1c;

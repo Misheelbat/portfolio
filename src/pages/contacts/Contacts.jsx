@@ -1,12 +1,16 @@
 import React from 'react';
 import AnimatePage from 'components/Layout/AnimatePage';
+import { useAddClassInterval } from 'hooks/useAddClassInterval';
 import styles from './contacts.module.css';
 
 export default function Contacts() {
+	const toggle = useAddClassInterval(8000);
 	return (
 		<AnimatePage>
-			<section className={styles.contacts}>
-				<h1>let's get in touch</h1>
+			<section data-toggle={toggle} className={styles.contacts}>
+				<div>
+					<h1>let's get in touch</h1>
+				</div>
 				<div className={styles.contactsContainer}>
 					<div className={styles.contactsContent}>
 						<div>
@@ -18,7 +22,8 @@ export default function Contacts() {
 							<span>06603214566</span>
 						</div>
 					</div>
-					<button>Let's Talk!</button>
+
+					<a href="mailto:example@email.com">Let's Talk!</a>
 				</div>
 			</section>
 		</AnimatePage>
