@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 // Components
-import Navbar from 'components/Elements/navbar/Navbar';
+import Navigation from 'components/Elements/navigation/Navigation';
 import Home from 'pages/home/Home';
 import Projects from 'pages/projects/Projects';
 import About from 'pages/about/About';
@@ -13,7 +13,7 @@ function App() {
 	const location = useLocation();
 	return (
 		<div className="App">
-			<Navbar />
+			<Navigation />
 			<AnimatePresence
 				exitBeforeEnter
 				onExitComplete={() => window.scrollTo(0, 0)}

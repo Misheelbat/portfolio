@@ -2,7 +2,7 @@ import React from 'react';
 import { useGetPageInfo } from 'hooks/useGetPageInfo';
 import NavDropdown from '../NavDropdown/NavDropdown';
 
-import styles from './navHeader.module.css';
+import styles from './navigation.module.css';
 
 export default function NavHeader() {
 	const pageInfo = useGetPageInfo();
