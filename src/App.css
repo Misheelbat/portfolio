@@ -19,6 +19,7 @@
 		rgba(229, 241, 253, 0.9) 0%,
 		rgba(235, 235, 235, 0.5) 32.68%
 	);
+
 	--fs-header: 38px;
 
 	--ff-primary: 'Poppins', sans-serif;
@@ -66,24 +67,22 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+html {
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
 body {
-	/* overflow: hidden; */
-	margin: 0;
-	padding: 0 var(--body-spacing);
-	font-size: clamp(16px, 1.2vw, 19px);
 	font-family: var(--ff-primary);
+	font-size: clamp(16px, 1.2vw, 19px);
 	line-height: 1.6;
+	margin: 0;
 	background: var(--bg-secondary);
+	-webkit-font-smoothing: antialiased;
+	scroll-behavior: smooth;
 }
 .App {
 	position: relative;
 	min-height: 100vh;
 	max-width: 1200px;
 	margin: 0 auto;
-}
-
-/* navlinks active style */
-li a.active {
-	color: #ea98f7;
-	transition: color 0.25s ease-out;
 }

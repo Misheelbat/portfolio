@@ -1,0 +1,70 @@
+.navLinksContainer {
+	display: flex;
+	flex-direction: column;
+}
+.navbar li {
+	overflow: hidden;
+}
+.navItem {
+	width: 7em;
+	position: relative;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	line-height: 1.2;
+	letter-spacing: 1px;
+	display: flex;
+	align-items: center;
+}
+
+/* place li with active class on top of list */
+.active {
+	order: -1;
+}
+
+/* on hover show hidden li's */
+.navLinksContainer:hover li {
+	display: block;
+}
+
+/* li with no active class */
+li:not(.active) {
+	display: none;
+}
+li:not(.active) .navItem {
+	color: rgba(28, 28, 28, 0.8);
+	font-size: 1em;
+}
+
+/* glowing effect */
+.active[data-toggle='true'] .navItem::before {
+	content: '';
+	position: absolute;
+	top: 0.1em;
+	left: -2em;
+	height: 0.8em;
+	width: 0.65em;
+	background: #fff;
+	box-shadow: 0 0 10px #fff;
+	filter: blur(3px);
+	opacity: 0.7;
+	transform: rotate(30deg);
+	animation: shine 500ms ease-in 1;
+	animation-delay: 1s;
+}
+@keyframes shine {
+	100% {
+		left: 120%;
+	}
+}
+.active .navItem::after {
+	content: url('assets/downArrow.svg');
+	position: absolute;
+	width: 0.8em;
+	height: 0.8em;
+	right: 0;
+	transform: rotate(-90deg);
+	transition: transform 250ms ease-in;
+}
+.navLinksContainer:hover .navItem::after {
+	transform: rotate(0deg);
+}

@@ -5,6 +5,13 @@ import styles from './contacts.module.css';
 
 export default function Contacts() {
 	const toggle = useAddClassInterval(8000);
+	// const cursorRef = useRef(null);
+	// useEffect(() => {
+	// 	document.addEventListener('mousemove', (e) => {
+	// 		cursorRef.current.style.left = e.pageX + 'px';
+	// 		cursorRef.current.style.top = e.pageY + 'px';
+	// 	});
+	// }, []);
 	return (
 		<AnimatePage>
 			<section data-toggle={toggle} className={styles.contacts}>
@@ -15,14 +22,13 @@ export default function Contacts() {
 					<div className={styles.contactsContent}>
 						<div>
 							<span>email</span>
-							<span>example@email</span>
+							<span className={styles.contactsInfo}>example@email</span>
 						</div>
 						<div>
 							<span>telefon</span>
-							<span>06603214566</span>
+							<span className={styles.contactsInfo}>06603214566</span>
 						</div>
 					</div>
-
 					<a href="mailto:example@email.com">Let's Talk!</a>
 				</div>
 			</section>

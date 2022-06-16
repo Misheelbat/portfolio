@@ -1,4 +1,6 @@
 .contacts {
+	padding: 0 var(--body-spacing);
+
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -9,8 +11,8 @@
 	font-size: calc(clamp(3em, 5vw, 4.5em) * 0.85);
 }
 .contacts > div:nth-of-type(1) {
-	padding-top: 15rem;
-	padding-bottom: 1.5em;
+	padding-top: calc(var(--section-spacing) * 1.5);
+	padding-bottom: calc(var(--section-spacing) / 2);
 }
 .contacts span {
 	display: block;
@@ -21,33 +23,31 @@
 	display: flex;
 }
 /* contact details */
-.contactsContainer div:nth-of-type(1) {
+.contactsContent {
 	width: 40%;
 }
 
 /* contact button */
-.contactsContainer div:nth-of-type(2) {
+.contactsContainer > a {
 	width: 50%;
 }
-
 .contactsContainer a {
-	align-self: center;
+	align-self: flex-end;
 	position: relative;
 	display: grid;
 	place-content: center;
-	border: 0;
 	margin: 0 auto;
 	border-radius: 50%;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 	cursor: pointer;
-	background-color: #fff;
-	font-size: calc(clamp(1.55em, 2.3vw, 2.5em) * 0.7);
-	width: calc(clamp(1.55em, 2.3vw, 2.5em) * 6);
-	height: calc(clamp(1.55em, 2.3vw, 2.5em) * 6);
-	box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.02),
-		0px 10px 20px rgba(51, 51, 51, 0.08);
+	color: #fff;
+	background-color: #1c1c1c;
+	font-size: calc(clamp(1.55em, 2.3vw, 2.5em) * 0.65);
+	width: calc(clamp(1.55em, 2.3vw, 2.5em) * 5.5);
+	height: calc(clamp(1.55em, 2.3vw, 2.5em) * 5.5);
+	transition: transform 250ms ease-out;
 }
-
+/* button hover effect */
 .contactsContainer a::after {
 	content: '';
 	position: absolute;
@@ -61,18 +61,21 @@
 	opacity: 0;
 	transition: opacity 250ms, transform 250ms ease-in-out;
 }
+.contactsContainer a:hover {
+	transform: scale(1.1);
+}
 .contactsContainer a:hover::after,
 .contactsContainer a:focus::after {
 	opacity: 1;
 	transform: scale(1.5);
 }
 
-.contactsContent div:nth-of-type(1) {
+.contactsContent > div:nth-of-type(1) {
 	margin-bottom: 1.5em;
 }
 
 /* contact name */
-.contactsContent div span:nth-of-type(1) {
+.contactsContent > div span:nth-of-type(1) {
 	padding-right: 2em;
 	padding-bottom: 0.2em;
 	width: min-content;
@@ -80,7 +83,7 @@
 }
 
 /* contact info */
-.contactsContent div span:nth-of-type(2) {
+.contactsInfo {
 	margin-top: 0.3em;
 	opacity: 0.7;
 }

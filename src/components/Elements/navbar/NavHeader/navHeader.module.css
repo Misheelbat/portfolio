@@ -1,25 +1,22 @@
 .header {
+	padding: 0 var(--body-spacing);
 	position: absolute;
-	top: 0;
+	top: 2rem;
 	left: 0;
 	right: 0;
 	display: flex;
-	margin-top: 2rem;
-	align-items: flex-start;
+	z-index: 100;
 }
-.header > span:nth-of-type(1) {
+
+/* numbering */
+.header > span {
 	font-weight: 400;
-	font-size: 34px;
+	font-size: 2em;
 	line-height: 1;
 	margin-right: 6rem;
 }
-.header > span:nth-of-type(2) {
-	font-size: 1.2rem;
-	position: relative;
-	width: max-content;
-	line-height: 1.2;
-	overflow: hidden;
-}
+
+/* name */
 .header p {
 	margin-left: auto;
 }
@@ -27,25 +24,4 @@
 	display: block;
 	font-size: 1.2rem;
 	line-height: 1.1;
-}
-
-.header[data-toggle='true'] > span:nth-of-type(2)::before {
-	content: '';
-	position: absolute;
-	height: 0.8em;
-	width: 0.65em;
-	background: #fff;
-	box-shadow: 0 0 10px #fff;
-	filter: blur(3px);
-	opacity: 0.7;
-	top: 0.1em;
-	left: -2em;
-	transform: rotate(30deg);
-	animation: shine 500ms ease-in 1;
-	animation-delay: 1s;
-}
-@keyframes shine {
-	100% {
-		left: 120%;
-	}
 }

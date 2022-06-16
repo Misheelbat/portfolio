@@ -6,6 +6,8 @@
 /* Layout */
 
 .projects {
+	padding: 0 var(--body-spacing);
+
 	display: flex;
 	align-items: center;
 	flex-direction: column;

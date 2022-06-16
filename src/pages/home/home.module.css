@@ -1,6 +1,9 @@
 .home {
+	padding: 0 var(--body-spacing);
+
 	color: var(--clr-bg);
 	position: relative;
+	/* width: 95%; */
 	height: 100vh;
 	display: flex;
 	align-items: center;
@@ -14,18 +17,3 @@
 	font-weight: 400;
 	line-height: 1.1;
 }
-/* 
-.contactBtn {
-	display: inline-block;
-	color: black;
-	font-size: 20px;
-	text-transform: uppercase;
-
-	padding: 0.5rem 2.5rem;
-	border: 0;
-	border-radius: 0.4rem;
-	background-color: var(--clr-green);
-	margin-top: 2rem;
-	box-shadow: -18px -18px 30px 10px rgba(255, 255, 255, 0.5),
-		18px 18px 30px rgba(195, 205, 221, 0.6);
-} */

@@ -1,6 +1,7 @@
 /* Typography */
 .about {
 	--fs-h1: calc(clamp(3.25em, 7vw, 8em) * 0.875);
+	padding: 0 var(--body-spacing);
 	font-family: var(--ff-secondary);
 	color: var(--clr-text);
 	overflow-x: hidden;
