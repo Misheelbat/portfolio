@@ -9,12 +9,8 @@
 	--clr-green: #c7ecdf;
 	--clr-purple: #dac4f7;
 	--clr-border-light: rgba(28, 29, 32, 0.3);
+
 	--bg-primary: linear-gradient(
-		113.87deg,
-		rgba(244, 233, 234, 0.9) 3.23%,
-		#e5f1fd 100%
-	);
-	--bg-secondary: linear-gradient(
 		180deg,
 		rgba(229, 241, 253, 0.9) 0%,
 		rgba(235, 235, 235, 0.5) 32.68%
@@ -76,7 +72,7 @@ body {
 	font-size: clamp(16px, 1.2vw, 19px);
 	line-height: 1.6;
 	margin: 0;
-	background: var(--bg-secondary);
+	background: var(--bg-primary);
 	-webkit-font-smoothing: antialiased;
 	scroll-behavior: smooth;
 }

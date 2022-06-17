@@ -3,7 +3,7 @@ import cx from 'classnames';
 import { NavLink } from 'react-router-dom';
 import { useAddClassInterval } from 'hooks/useAddClassInterval';
 
-import styles from './navbar.module.css';
+import styles from './navDropdown.module.css';
 
 const NAV_ITEMS = [
 	{

@@ -4,6 +4,7 @@
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 .contacts h1 {
 	font-family: var(--ff-secondary);
@@ -11,7 +12,6 @@
 	font-size: calc(clamp(3em, 5vw, 4.5em) * 0.85);
 }
 .contacts > div:nth-of-type(1) {
-	padding-top: calc(var(--section-spacing) * 1.5);
 	padding-bottom: calc(var(--section-spacing) / 2);
 }
 .contacts span {
@@ -32,6 +32,8 @@
 	width: 50%;
 }
 .contactsContainer a {
+	color: #fff;
+	background-color: var(--clr-bg);
 	align-self: flex-end;
 	position: relative;
 	display: grid;
@@ -40,8 +42,6 @@
 	border-radius: 50%;
 	letter-spacing: 1px;
 	cursor: pointer;
-	color: #fff;
-	background-color: #1c1c1c;
 	font-size: calc(clamp(1.55em, 2.3vw, 2.5em) * 0.65);
 	width: calc(clamp(1.55em, 2.3vw, 2.5em) * 5.5);
 	height: calc(clamp(1.55em, 2.3vw, 2.5em) * 5.5);
@@ -69,9 +69,8 @@
 	opacity: 1;
 	transform: scale(1.5);
 }
-
-.contactsContent > div:nth-of-type(1) {
-	margin-bottom: 1.5em;
+.contactsContent > * + * {
+	margin-top: 1.5em;
 }
 
 /* contact name */
@@ -87,16 +86,10 @@
 	margin-top: 0.3em;
 	opacity: 0.7;
 }
-@media (max-width: 400px) {
-	.contactsContainer {
-		flex-direction: column;
-		gap: calc(var(--section-spacing) / 2);
-	}
-}
+
 /* glowing effect */
 .contacts h1 {
 	position: relative;
-	width: max-content;
 	line-height: 1.2;
 	overflow: hidden;
 }
@@ -119,5 +112,15 @@
 @keyframes shine {
 	100% {
 		left: 120%;
+	}
+}
+
+@media (max-width: 550px) {
+	.contactsContainer {
+		flex-direction: column;
+		gap: calc(var(--section-spacing) / 2);
+	}
+	.contacts > div:nth-of-type(1) {
+		padding-top: calc(var(--section-spacing) * 1.5);
 	}
 }

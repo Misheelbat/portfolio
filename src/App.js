@@ -2,7 +2,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 import { AnimatePresence } from 'framer-motion';
 
 // Components
-import Navigation from 'components/Elements/navigation/Navigation';
+import Navigation from 'components/Elements/navbar/Navigation/Navigation';
 import Home from 'pages/home/Home';
 import Projects from 'pages/projects/Projects';
 import About from 'pages/about/About';
