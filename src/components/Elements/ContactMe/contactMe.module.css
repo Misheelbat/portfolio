@@ -78,3 +78,23 @@
 	color: rgba(28, 29, 32, 0.8);
 	transform: scale(1.04);
 }
+.btns {
+	padding-top: 1em;
+}
+
+.btns a {
+	color: #fff;
+	font-size: 1em;
+	font-family: var(--ff-primary);
+	background-color: var(--clr-bg);
+	letter-spacing: 1px;
+	border: 0;
+	border-radius: 2.125em;
+	margin-right: 0.5em;
+	padding: 1.4em 2.5em;
+	transition: all 250ms ease-out;
+}
+.btns a:hover {
+	color: var(--clr-bg);
+	background-color: var(--clr-green);
+}

@@ -2,19 +2,36 @@
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
+	overflow: hidden;
 }
 .navbar li {
 	overflow: hidden;
+	transition: margin-left 150ms ease-out;
 }
 .navItem {
-	width: 7em;
 	position: relative;
+	width: max-content;
 	text-transform: uppercase;
 	font-size: 1.2em;
 	line-height: 1.2;
 	letter-spacing: 1px;
 	display: flex;
 	align-items: center;
+	padding-bottom: 0.2em;
+}
+.navItem::after {
+	content: '';
+	position: absolute;
+	background-color: var(--clr-bg);
+	height: 1px;
+	width: 0;
+	left: 0;
+	bottom: 0;
+	transition: width 150ms ease-in;
+}
+
+.navItem:hover::after {
+	width: 100%;
 }
 
 /* place li with active class on top of list */
@@ -22,14 +39,13 @@
 	order: -1;
 }
 
+/* li with no active class hide by default*/
+li:not(.active) {
+	margin-left: -100%;
+}
 /* on hover show hidden li's */
 .navLinksContainer:hover li {
-	display: block;
-}
-
-/* li with no active class */
-li:not(.active) {
-	display: none;
+	margin-left: 0;
 }
 li:not(.active) .navItem {
 	color: rgba(28, 28, 28, 0.8);
@@ -57,15 +73,23 @@ li:not(.active) .navItem {
 		left: 120%;
 	}
 }
-.active .navItem::after {
+
+/* rigth facing arrow */
+.active {
+	position: relative;
+	padding-right: 3em;
+}
+.active::after {
 	content: url('assets/downArrow.svg');
 	position: absolute;
+	top: 0.2em;
 	width: 0.8em;
 	height: 0.8em;
-	right: 0;
-	transform: rotate(-90deg);
-	transition: transform 250ms ease-in;
+	right: 0.5em;
+	transform: rotateZ(-90deg);
+	transition: transform 150ms ease-in;
 }
-.navLinksContainer:hover .navItem::after {
-	transform: rotate(0deg);
+.active:hover::after,
+.navLinksContainer:hover .active::after {
+	transform: rotateZ(0deg);
 }

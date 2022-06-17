@@ -42,6 +42,7 @@
 .subheader {
 	font-size: calc(clamp(3em, 5vw, 4.5em) * 0.75);
 }
+
 /* Layout */
 .about {
 	padding-top: 20rem;
@@ -113,7 +114,7 @@
 	justify-content: space-between;
 	gap: 1rem;
 }
-.skillsContainer > * + * {
+.skillsContainer article:nth-child(-n + 3) {
 	padding-bottom: calc(var(--section-spacing) / 3);
 }
 .skillsSet {
@@ -141,6 +142,9 @@
 	.skillsSet {
 		width: 45%;
 		padding-inline: 0;
+	}
+	.skillsContainer article:nth-last-child(-n + 2) {
+		padding-bottom: 0;
 	}
 }
 

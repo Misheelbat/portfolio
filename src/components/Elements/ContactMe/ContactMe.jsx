@@ -22,8 +22,10 @@ export default function ContactMe() {
 					<span>Contact me</span>
 				</Link>
 			</div>
-			<a href="mailto:example@email.com">example@email.com</a>
-			<a href="tel:066032112354">066032112354</a>
+			<div className={styles.btns}>
+				<a href="mailto:example@email.com">example@email.com</a>
+				<a href="tel:066032112354">066032112354</a>
+			</div>
 		</div>
 	);
 }
