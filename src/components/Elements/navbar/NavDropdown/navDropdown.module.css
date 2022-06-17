@@ -93,3 +93,8 @@ li:not(.active) .navItem {
 .navLinksContainer:hover .active::after {
 	transform: rotateZ(0deg);
 }
+@media (max-width: 400px) {
+	.active {
+		padding-right: 2em;
+	}
+} ;
