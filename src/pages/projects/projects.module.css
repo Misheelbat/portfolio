@@ -7,21 +7,25 @@
 
 .projects {
 	padding: 0 var(--body-spacing);
-
+	height: 100vh;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	justify-content: center;
 }
 .projects > * {
 	margin-bottom: calc(var(--section-spacing) / 2);
 }
-.projects:first-child {
+/* .projects:first-child {
 	padding-top: 15rem;
-}
+} */
 .projects header {
 	font-size: clamp(1.55em, 2.3vw, 2.5em);
 	font-family: var(--ff-secondary);
 	width: 100%;
 	align-self: flex-start;
 	border-bottom: 1px solid var(--clr-border-light);
+}
+.projects header span {
+	display: block;
 }

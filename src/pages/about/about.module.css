@@ -1,6 +1,6 @@
 /* Typography */
 .about {
-	--fs-h1: calc(clamp(3.25em, 7vw, 8em) * 0.875);
+	--fs-h1: calc(clamp(3.25em, 6vw, 6em) * 0.875);
 	padding: 0 var(--body-spacing);
 	font-family: var(--ff-secondary);
 	color: var(--clr-text);
@@ -78,7 +78,8 @@
 .titleContainer p {
 	justify-self: center;
 	grid-area: about;
-	max-width: 37.5rem;
+	max-width: 37rem;
+	padding-right: 1em;
 }
 /* line left and right */
 .aboutName {
@@ -131,9 +132,9 @@
 }
 /* divider ball */
 .ball {
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
+	width: 10px;
+	height: 1px;
+	/* border-radius: 50%; */
 	margin: calc(var(--section-spacing) / 1.5) auto;
 	background-color: var(--clr-bg);
 }
@@ -165,8 +166,8 @@
 	.aboutName::after {
 		width: 30%;
 	}
-	.ball {
+	/* .ball {
 		width: 35px;
 		height: 35px;
-	}
+	} */
 }
