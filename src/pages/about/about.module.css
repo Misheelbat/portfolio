@@ -85,11 +85,10 @@
 	grid-area: title;
 	display: flex;
 }
-.aboutName::before,
-.aboutName::after {
-	content: '';
+.lineBefore,
+.lineAfter {
 	display: block;
-	width: 100%;
+	flex-basis: 100%;
 	height: 1px;
 	background-color: var(--clr-border-light);
 }
@@ -162,11 +161,7 @@
 	.titleContainer p {
 		font-size: 1.5rem;
 	}
-	.aboutName::after {
-		width: 30%;
+	.lineAfter {
+		flex-basis: 20%;
 	}
-	/* .ball {
-		width: 35px;
-		height: 35px;
-	} */
 }

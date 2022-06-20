@@ -14,7 +14,7 @@ const container = {
 	away: {
 		opacity: 0,
 		y: -500,
-		transition: { duration: 0.5, ease: 'easeIn' },
+		transition: { duration: 0.5, ease: 'easeOut' },
 	},
 };
 export default function AnimatePage({ children, ...props }) {

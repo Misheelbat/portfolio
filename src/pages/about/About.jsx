@@ -1,9 +1,11 @@
 import React from 'react';
-import AnimatePage from 'components/Layout/AnimatePage';
+import { motion } from 'framer-motion';
 
+import AnimatePage from 'components/Layout/AnimatePage';
 import Slider from 'components/Elements/slider/Slider';
 import ContactMe from 'components/Elements/ContactSection/ContactMe';
 import profileImg from 'assets/photo.jpg';
+
 import styles from './about.module.css';
 
 export default function About() {
@@ -13,14 +15,37 @@ export default function About() {
 				<header>
 					<div className={styles.titleContainer}>
 						<div className={styles.aboutName}>
+							<motion.div
+								initial={{ flexBasis: '10%' }}
+								animate={{
+									flexBasis: '100%',
+									transition: { ease: 'easeInOut', duration: 0.5, delay: 0.6 },
+								}}
+								className={styles.lineBefore}
+							/>
 							<h1>
 								About <span>john doe</span>
 							</h1>
+							<motion.div
+								initial={{ flexBasis: '100%' }}
+								animate={{
+									flexBasis: '20%',
+									transition: { ease: 'easeInOut', duration: 0.5, delay: 0.6 },
+								}}
+								className={styles.lineAfter}
+							/>
 						</div>
-						<p>
+						<motion.p
+							initial={{ opacity: 0, x: '-100vw' }}
+							animate={{
+								opacity: 1,
+								x: 0,
+								transition: { ease: 'easeInOut', duration: 0.5, delay: 0.6 },
+							}}
+						>
 							I'm a creative developer with years of experience in building
 							products and appealing web experiences.
-						</p>
+						</motion.p>
 						<img src={profileImg} alt="profile" />
 					</div>
 				</header>

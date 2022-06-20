@@ -7,7 +7,7 @@
 
 .projects {
 	padding: 0 var(--body-spacing);
-	padding-top: 10em;
+	padding-top: 9em;
 	min-height: 100vh;
 	display: flex;
 	align-items: center;

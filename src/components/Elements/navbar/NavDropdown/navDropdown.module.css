@@ -46,8 +46,8 @@ li:not(.active) {
 	margin-left: -100%;
 }
 /* on hover show hidden li's */
-.navLinksContainer:focus li,
-.navLinksContainer[data-menu-state='true'] li {
+.navLinksContainer:hover li,
+.navLinksContainer:focus li {
 	visibility: visible;
 	margin-left: 0;
 }
@@ -102,4 +102,13 @@ li:not(.active) .navItem {
 	.active {
 		padding-right: 2em;
 	}
-} ;
+}
+@media (max-width: 750px) {
+	.navLinksContainer[data-menu-state='true'] li {
+		visibility: visible;
+		margin-left: 0;
+	}
+	.navLinksContainer[data-menu-state='true'] .active::after {
+		transform: rotateZ(0deg);
+	}
+}
