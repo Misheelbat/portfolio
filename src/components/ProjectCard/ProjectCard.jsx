@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import styles from './projectCard.module.css';
 
 const item = {
-	hidden: { opacity: 0, x: -300 },
+	hidden: { opacity: 0, x: 300 },
 	show: {
 		opacity: 1,
 		x: 0,
@@ -16,12 +16,12 @@ const item = {
 	},
 };
 const container = {
-	hidden: { opacity: 0, x: -200 },
+	hidden: { opacity: 0, x: 200 },
 	show: {
 		opacity: 1,
 		x: 0,
 		transition: {
-			staggerChildren: 0.1,
+			staggerChildren: 0.2,
 			delayChildren: 0.7,
 		},
 	},

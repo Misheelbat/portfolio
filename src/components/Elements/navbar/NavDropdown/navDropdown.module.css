@@ -30,7 +30,8 @@
 	transition: width 150ms ease-in;
 }
 
-.navItem:hover::after {
+.navItem:hover::after,
+.navItem:focus:after {
 	width: 100%;
 }
 
@@ -41,12 +42,16 @@
 
 /* li with no active class hide by default*/
 li:not(.active) {
+	visibility: hidden;
 	margin-left: -100%;
 }
 /* on hover show hidden li's */
-.navLinksContainer:hover li {
+.navLinksContainer:focus li,
+.navLinksContainer[data-menu-state='true'] li {
+	visibility: visible;
 	margin-left: 0;
 }
+
 li:not(.active) .navItem {
 	color: rgba(28, 28, 28, 0.8);
 	font-size: 1em;

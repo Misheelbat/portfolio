@@ -2,7 +2,7 @@ import React from 'react';
 import AnimatePage from 'components/Layout/AnimatePage';
 
 import Slider from 'components/Elements/slider/Slider';
-import ContactMe from 'components/Elements/ContactMe/ContactMe';
+import ContactMe from 'components/Elements/ContactSection/ContactMe';
 import profileImg from 'assets/photo.jpg';
 import styles from './about.module.css';
 

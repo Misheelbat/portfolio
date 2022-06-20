@@ -1,6 +1,5 @@
 .contacts {
 	padding: 0 var(--body-spacing);
-
 	height: 100vh;
 	display: flex;
 	flex-direction: column;

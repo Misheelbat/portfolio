@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import { useAddClassInterval } from 'hooks/useAddClassInterval';
 
 import styles from './navDropdown.module.css';
+import { useState } from 'react';
 
 const NAV_ITEMS = [
 	{
@@ -28,13 +29,15 @@ const NAV_ITEMS = [
 	},
 ];
 export default function NavDropdown({ pageNumber }) {
+	const [menuToggle, setMenuToggle] = useState(false);
 	const toggle = useAddClassInterval(8000);
 
 	return (
 		<nav className={styles.navbar}>
-			<ul className={styles.navLinksContainer}>
+			<ul data-menu-state={menuToggle} className={styles.navLinksContainer}>
 				{NAV_ITEMS.map((item) => (
 					<li
+						onClick={() => setMenuToggle(!menuToggle)}
 						data-toggle={toggle}
 						key={item.page}
 						className={cx({
