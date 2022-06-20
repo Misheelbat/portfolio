@@ -12,11 +12,18 @@ const item = {
 		opacity: 1,
 		x: 0,
 		transition: {
-			type: 'spring',
-			bounce: 0.1,
+			ease: 'easeOut',
+			duration: 0.3,
 		},
 	},
-	away: { opacity: 0, x: -300 },
+	away: {
+		opacity: 0,
+		x: '-100vw',
+		transition: {
+			ease: 'easeIn',
+			duration: 0.3,
+		},
+	},
 };
 const container = {
 	hidden: { opacity: 0, x: -400 },
@@ -24,17 +31,20 @@ const container = {
 		opacity: 1,
 		x: 0,
 		transition: {
+			ease: 'easeOut',
+			duration: 0.8,
 			staggerChildren: 0.2,
 		},
 	},
-	away: { opacity: 0, x: '-100vw' },
+	away: {
+		opacity: 0,
+		x: '-100vw',
+		transition: { ease: 'easeIn', duration: 0.5, staggerChildren: 0.1 },
+	},
 };
 export default function Home() {
 	return (
-		<AnimatePage
-			variants={container}
-			transition={{ duration: 0.5, ease: 'backInOut' }}
-		>
+		<AnimatePage variants={container}>
 			<main className={styles.home}>
 				<div className={styles.content}>
 					<h1>

@@ -6,7 +6,7 @@
 	margin-bottom: 0.4rem;
 }
 .info h1 {
-	font-size: clamp(1.55em, 2.3vw, 2.5em);
+	font-size: calc(var(--fs-h3) * 0.9);
 	font-weight: 400;
 	line-height: 1.2;
 }

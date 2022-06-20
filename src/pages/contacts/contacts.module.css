@@ -8,7 +8,7 @@
 .contacts h1 {
 	font-family: var(--ff-secondary);
 	text-transform: uppercase;
-	font-size: calc(clamp(3em, 5vw, 4.5em) * 0.85);
+	font-size: var(--fs-h2);
 }
 .contacts > div:nth-of-type(1) {
 	padding-bottom: calc(var(--section-spacing) / 2);
@@ -16,7 +16,7 @@
 .contacts span {
 	display: block;
 	font-family: var(--ff-primary);
-	font-size: calc(clamp(1.55em, 2.3vw, 2.5em) * 0.8);
+	font-size: calc(var(--fs-h3) * 0.9);
 }
 .contactsContainer {
 	display: flex;
@@ -41,9 +41,9 @@
 	border-radius: 50%;
 	letter-spacing: 1px;
 	cursor: pointer;
-	font-size: calc(clamp(1.55em, 2.3vw, 2.5em) * 0.65);
-	width: calc(clamp(1.55em, 2.3vw, 2.5em) * 5.5);
-	height: calc(clamp(1.55em, 2.3vw, 2.5em) * 5.5);
+	font-size: calc(var(--fs-h3) * 0.8);
+	width: calc(var(--fs-h3) * 5.5);
+	height: calc(var(--fs-h3) * 5.5);
 	transition: transform 250ms ease-out;
 }
 /* button hover effect */

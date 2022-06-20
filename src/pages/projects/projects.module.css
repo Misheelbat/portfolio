@@ -21,7 +21,7 @@
 	padding-top: 15rem;
 } */
 .projects header {
-	font-size: clamp(1.55em, 2.3vw, 2.5em);
+	font-size: calc(var(--fs-h2) * 0.6);
 	font-family: var(--ff-secondary);
 	width: 100%;
 	align-self: flex-start;
