@@ -46,7 +46,9 @@ export default function About() {
 							I'm a creative developer with years of experience in building
 							products and appealing web experiences.
 						</motion.p>
-						<img src={profileImg} alt="profile" />
+						<div className={styles.aboutImg}>
+							<img src={profileImg} alt="profile" />
+						</div>
 					</div>
 				</header>
 				<div className={styles.ball} />
